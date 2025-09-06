@@ -1,10 +1,9 @@
 import multiprocessing
 import time
-import os
-from datetime import datetime
 import yaml
 import argparse
 import logging
+import save_json
 
 # LangChain models
 from langchain_community.chat_models import ChatLlamaCpp
@@ -161,11 +160,17 @@ def load_strings(dataset: str):
     # Main
     # -------------------------
 
-    def calc_metrics(tp, fp, fn, elapsed, processed):
-        precision = tp / (tp + fp) if (tp + fp) else 0
-        recall = tp / (tp + fn) if (tp + fn) else 0
-        sets_per_min = (processed / elapsed * 60) if elapsed else 0
-        return precision, recall, sets_per_min
+
+def calc_metrics(tp, fp, fn, elapsed, processed):
+    precision = tp / (tp + fp) if (tp + fp) else 0
+    recall = tp / (tp + fn) if (tp + fn) else 0
+    sets_per_min = (processed / elapsed * 60) if elapsed else 0
+
+    if (precision + recall) > 0:
+        f1 = 2 * (precision * recall) / (precision + recall)
+    else:
+        f1 = 0.0
+    return precision, recall, sets_per_min, f1
 
 
 if __name__ == "__main__":
@@ -194,12 +199,14 @@ if __name__ == "__main__":
 
             if idx % 10 == 0 or idx == args.max:
                 elapsed = time.time() - start_time
-                precision, recall, spm = calc_metrics(tp, fp, fn, elapsed, processed)
+                precision, recall, spm, f1 = calc_metrics(
+                    tp, fp, fn, elapsed, processed
+                )
                 print(
                     f"Progress: {(idx/total_strings)*100:.2f}% - {idx}/{total_strings} | "
                     f"set/min: {spm:.2f} | Time: {elapsed:.2f}s | "
                     f"TP: {tp}, TN: {tn}, FP: {fp}, FN: {fn} | "
-                    f"Precision: {precision:.2f}, Recall: {recall:.2f}"
+                    f"Precision: {precision:.2f}, Recall: {recall:.2f}, F1 {f1:.2f}"
                 )
 
             if idx >= args.max:
@@ -221,20 +228,19 @@ if __name__ == "__main__":
                 _write(en, ca, note, res, file, "fp")
 
     total_time = time.time() - start_time
+    prompt_version = args.prompt_version
+    prompt_comment = metadata["goal"]
+    save_json.save_json(
+        prompt_version,
+        prompt_comment,
+        tp,
+        fp,
+        fn,
+        tn,
+        precision,
+        recall,
+        f1,
+        total_time,
+        processed,
+    )
     print(f"Total time used: {total_time:.2f} seconds")
-
-    # Save stats
-    csv = f"output/stats_{args.max}.csv"
-    precision, recall, _ = calc_metrics(tp, fp, fn, total_time, processed)
-
-    mode, write_header = ("a", False) if os.path.exists(csv) else ("w", True)
-    with open(csv, mode, encoding="utf-8") as fh:
-        if write_header:
-            fh.write(
-                "date_time\tprompt_version\tgoal\ttp\tfp\tfn\ttn\tprecision\trecall\ttotal_time\tstrings\n"
-            )
-        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        fh.write(
-            f"{now}\t{args.prompt_version}\t{metadata['goal']}\t{tp}\t{fp}\t{fn}\t{tn}\t"
-            f"{precision:.2f}\t{recall:.2f}\t{total_time:.2f}\t{processed}\n"
-        )
