@@ -4,6 +4,7 @@ from datetime import datetime
 
 
 def save_json(
+    model,
     prompt_version,
     prompt_comment,
     tp,

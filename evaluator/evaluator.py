@@ -230,7 +230,7 @@ if __name__ == "__main__":
     total_time = time.time() - start_time
     prompt_version = args.prompt_version
     prompt_comment = metadata["goal"]
-    save_json.save_json(
+    save_json.save_json(args.model_type,
         prompt_version,
         prompt_comment,
         tp,
