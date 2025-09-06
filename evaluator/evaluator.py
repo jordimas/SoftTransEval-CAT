@@ -136,17 +136,30 @@ def load_strings(dataset: str):
     with open(dataset, "rb") as file:
         tmx = tmxfile(file, "en", "ca")
     strings = []
+    notes = 0
     for tu in tmx.unit_iter():
         source = tu.source
         target = tu.target
         note = tu.getnotes()
+        if note:
+            notes += 1
         strings.append((source, target, note))
+
+    total = len(strings)
+    errors = notes
+    correct = total - errors
+
+    error_pct = (errors / total) * 100 if total > 0 else 0
+    correct_pct = (correct / total) * 100 if total > 0 else 0
+
+    print(
+        f"DATASET. Loaded {total} strings with {errors} translation errors. Errors {error_pct:.2f}%, correct: {correct_pct:.2f}%"
+    )
     return strings
 
-
-# -------------------------
-# Main
-# -------------------------
+    # -------------------------
+    # Main
+    # -------------------------
 
     def calc_metrics(tp, fp, fn, elapsed, processed):
         precision = tp / (tp + fp) if (tp + fp) else 0
@@ -159,7 +172,9 @@ if __name__ == "__main__":
     args = get_args()
 
     llm = load_llm(args.model_type, args.model_path)
-    prompt, metadata = load_prompt(args.prompt_version), load_metadata(args.prompt_version)
+    prompt, metadata = load_prompt(args.prompt_version), load_metadata(
+        args.prompt_version
+    )
 
     dataset = "dataset/dataset.tmx"
     strings = load_strings(dataset)
@@ -168,8 +183,11 @@ if __name__ == "__main__":
     tp = fp = fn = tn = processed = 0
     start_time = time.time()
 
-
-    with open(f"output/results--{args.max}-{args.model_type}-v{args.prompt_version}.txt", "w", encoding="utf-8") as file:
+    with open(
+        f"output/results--{args.max}-{args.model_type}-v{args.prompt_version}.txt",
+        "w",
+        encoding="utf-8",
+    ) as file:
         for idx, (en, ca, note) in enumerate(strings, start=1):
             res = translate(llm, prompt, en, ca)
             processed += 1
@@ -212,10 +230,11 @@ if __name__ == "__main__":
     mode, write_header = ("a", False) if os.path.exists(csv) else ("w", True)
     with open(csv, mode, encoding="utf-8") as fh:
         if write_header:
-            fh.write("date_time\tprompt_version\tgoal\ttp\tfp\tfn\ttn\tprecision\trecall\ttotal_time\tstrings\n")
+            fh.write(
+                "date_time\tprompt_version\tgoal\ttp\tfp\tfn\ttn\tprecision\trecall\ttotal_time\tstrings\n"
+            )
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         fh.write(
             f"{now}\t{args.prompt_version}\t{metadata['goal']}\t{tp}\t{fp}\t{fn}\t{tn}\t"
             f"{precision:.2f}\t{recall:.2f}\t{total_time:.2f}\t{processed}\n"
         )
-
