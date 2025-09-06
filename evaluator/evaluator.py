@@ -13,9 +13,6 @@ from langchain.schema import SystemMessage, HumanMessage
 from translate.storage.tmx import tmxfile
 
 
-# -------------------------
-# Logging
-# -------------------------
 logging.basicConfig(
     filename="reviewer.log",
     filemode="w",
@@ -84,17 +81,16 @@ def get_args():
 # -------------------------
 # Prompt & Metadata
 # -------------------------
-def load_prompt(prompt_version: str):
-    with open(f"config/prompt-v{prompt_version}.txt", "r") as file:
+def load_prompt(model: str, prompt_version: str):
+    with open(f"config/{model}/prompt-v{prompt_version}.txt", "r") as file:
         return file.read()
 
 
-def load_metadata(prompt_version: str):
+def load_metadata(model: str, prompt_version: str):
     try:
-        with open(f"config/metadata-v{prompt_version}.yml", "r") as file:
-            return yaml.safe_load(file)
+        with open(f"config/{model}/metadatayml", "r") as fh:
+            return yaml.safe_load(fh)[prompt_version]
     except Exception as e:
-        print(e)
         return {"goal": "Default prompt description"}
 
 
@@ -131,7 +127,7 @@ def _write(english: str, catalan: str, note: str, result: str, fh, status: str):
     print(content)
 
 
-def load_strings(dataset: str, max_entries = -1):
+def load_strings(dataset: str, max_entries=-1):
     with open(dataset, "rb") as file:
         tmx = tmxfile(file, "en", "ca")
     strings = []
@@ -158,10 +154,6 @@ def load_strings(dataset: str, max_entries = -1):
     )
     return strings
 
-    # -------------------------
-    # Main
-    # -------------------------
-
 
 def calc_metrics(tp, fp, fn, elapsed, processed):
     precision = tp / (tp + fp) if (tp + fp) else 0
@@ -179,8 +171,8 @@ if __name__ == "__main__":
     args = get_args()
 
     llm = load_llm(args.model_type, args.model_path)
-    prompt, metadata = load_prompt(args.prompt_version), load_metadata(
-        args.prompt_version
+    prompt, metadata = load_prompt(args.model_type, args.prompt_version), load_metadata(
+        args.model_type, args.prompt_version
     )
 
     dataset = "dataset/dataset.tmx"
@@ -229,7 +221,8 @@ if __name__ == "__main__":
     total_time = time.time() - start_time
     prompt_version = args.prompt_version
     prompt_comment = metadata["goal"]
-    save_json.save_json(args.model_type,
+    save_json.save_json(
+        args.model_type,
         prompt_version,
         prompt_comment,
         tp,
