@@ -1,6 +1,6 @@
 import json
 import os
-import datetime
+from datetime import datetime
 
 
 def save_json(
@@ -29,6 +29,7 @@ def save_json(
         "tn": tn,
         "precision": round(precision, 2),
         "recall": round(recall, 2),
+        "f1": round(f1, 2),
         "total_time": round(total_time, 2),
         "strings": processed,
     }
