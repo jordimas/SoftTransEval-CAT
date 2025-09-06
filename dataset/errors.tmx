@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+  <header segtype="sentence" o-tmf="UTF-8" adminlang="en" srclang="en" datatype="PlainText">
+      <prop type="author">Softcatalà</prop>
+      <prop type="description">Corpus of real translation errros in computer programs</prop>
+  </header>      
+  <body>
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Rotation around (0,0). Rotation angle in degrees:</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Gir al volant (0,0). Angle de rotació en graus:</seg>
+      </tuv>
+      <note>'Volant' should be 'voltant'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Tag selected files with this field</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Copia amb aquest camp els fitxers seleccionats</seg>
+      </tuv>
+      <note>'Copia' should be 'Etiqueta'</note>      
+    </tu>
+      
+    <tu>
+      <tuv xml:lang="en">
+        <seg>No data to parse</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Sense dates per a analitzar</seg>
+      </tuv>
+      <note>'Dates' should be 'Dades'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>If you have no &lt;link linkend="fdl-invariant"&gt;Invariant Sections&lt;/link&gt;, write &lt;quote&gt;with no Invariant Sections&lt;/quote&gt; instead of saying which ones are invariant. If you have no &lt;link linkend="fdl-cover-texts"&gt;Front-Cover Texts&lt;/link&gt;, write &lt;quote&gt;no Front-Cover Texts&lt;/quote&gt; instead of &lt;quote&gt;Front-Cover Texts being LIST&lt;/quote&gt;; likewise for &lt;link linkend="fdl-cover-texts"&gt;Back-Cover Texts&lt;/link&gt;.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Si no teniu &lt;link linkend="fdl-invariant"&gt;Seccions invariables&lt;/link&gt; escriviu &lt;quote&gt;sense Seccions invariables&lt;/quote&gt; en lloc d'indicar quines són invariables. Si no teniu &lt;link linkend="fdl-cover-texts"&gt;Textos de portada&lt;/link&gt;, escriviu &lt;quote&gt;sense Textos de portada&lt;/quote&gt; en lloc de &lt;quote&gt;Textos de portada sent RELACIÓ&lt;/quote&gt;; de la mateixa manera per a &lt;link linkend="fdl-cover-texts"&gt;Textos de contraportada&lt;/link&gt;.</seg>
+      </tuv>
+      <note>'RELACIÓ' should be 'LLISTA'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Color</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Colors</seg>
+      </tuv>
+      <note>'color' should be 'colors'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Exponent [^ or **]</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Exponencial [^ o **]</seg>
+      </tuv>
+      <note>'exponent' should be 'potència'</note>      
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Allow CPU Throttling</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Permet l'acceleració de la CPU</seg>
+      </tuv>
+      <note>'acceleració' should be 'limitació'</note>
+    </tu>
+        
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Crawling single directory “%s”</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>S'està arrossegant el directori «%s»</seg>
+      </tuv>
+      <note>'arrossegant' should be 'rastrejant'</note>          
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Execute the current line, stepping over any function calls</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Executeu la línia actual, s'entrarà pas a pas sobre qualsevol cridada de funció</seg>
+      </tuv>
+      <note>'entrarà pas a pas' should be 'es passarà'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>left right double arrow</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>fletxa doble dreta esquerra</seg>
+      </tuv>
+      <note>'dreta esquerra' should be 'esquerra-detra'</note>            
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Failed to initialize trust list: %s</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>S'ha produït un error en emplenar la llista de confiança: %s</seg>
+      </tuv>
+      <note>'emplenar' should be 'inicialitzar'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Login;Name;Fingerprint;Avatar;Logo;Face;Password;Parental;Restrictions;Usage;Kid;Child;</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Inici de sessió;Nom;Empremta dactilar;Avatar;Logotip;Cara;Contrasenya;Control parental; Temps de pantalla; Restriccions d'aplicacions;Restriccions web;Ús;Límit d'ús;Nen;Nena;Infant;</seg>
+      </tuv>
+      <note>'Restrictions' should be 'Restriccions d'aplicacions;Restricció'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>The language to search for subtitles for movies in.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>La llengua a la qual cercar subtítols de la pel·lícula.</seg>
+      </tuv>
+      <note>'pel·lícula' should be 'pel·lícules'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Merge the blank page with your PDF document using &lt;app&gt;PDF-Shuffler&lt;/app&gt; placing the blank page at the end.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Combina el PDF en blanc amb el document PDF mitjançant &lt;app&gt;PDF-Shuffler&lt;/app&gt; col·locant la pàgina en blanc al final.</seg>
+      </tuv>
+      <note>'el PDF en blanc' should be 'pàgina en blanc'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>If set, then the assistive tools linked to this GConf key will be started with the GDM GUI program. By default this is a screen reader application.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Si s'ha definit, l'assistent vinculat a aquesta clau del GConf s'iniciarà amb la interfície gràfica del GDM. De forma predeterminada és un lector de pantalla.</seg>
+      </tuv>
+      <note>'l'assistent' should be 'eines assistives'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>If you highlight and copy text from a document using the &lt;app&gt;document viewer&lt;/app&gt; and then paste it into another application, the formatting may alter. It may also contain different characters than the original selection. This often happens when copying text from a PDF document with multiple columns.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Si seleccioneu i copieu text des d'un document fent servir el &lt;app&gt;Visualitzador de documents&lt;/app&gt; i llavors el copieu a una altra aplicació, la formatació podria sofrir canvis. Pot contenir caràcters diferents que la selecció original de text. Això passa sovint quan es copia text des de documents en format PDF amb columnes múltiples.</seg>
+      </tuv>
+      <note>'llavors el copieu' should be 'llavors l'enganxeu'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Depending on how much data has to be moved from the shrunk part, the filesystem resize may take longer time.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>En funció de la quantitat de dades que s'han d'eliminar de la part reduïda, el canvi de mida del sistema de fitxers pot trigar un temps més llarg.</seg>
+      </tuv>
+      <note>'eliminar' should be 'moure'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>In order for your computer to be able to use these devices, it needs to know how to communicate with them. This is done by a piece of software called a &lt;em&gt;device driver&lt;/em&gt;.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Per tal que l'ordinador pugui utilitzar aquests dispositius, necessita saber com comunicar-s'hi. Això es fa mitjançant una peça de programari anomenada a &lt;em&gt;controlador del dispositiu&lt;/em&gt;.</seg>
+      </tuv>
+      <note>'a controlador' should be 'controlador'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Devhelp support</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Consulta el Devhelp</seg>
+      </tuv>
+        <note>'Consulta el' should be 'Suport per a'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Repeatedly lift and place your finger on the reader to enroll your fingerprint</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Aixequeu i poseu el dit al lector per a inscriure la vostra empremta dactilar</seg>
+      </tuv>
+        <note>'Repeatedly' is missing</note>      
+    </tu>
+
+  </body>
+</tmx>
+
