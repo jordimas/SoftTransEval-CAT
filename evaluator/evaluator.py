@@ -211,9 +211,6 @@ if __name__ == "__main__":
                     f"Precision: {precision:.2f}, Recall: {recall:.2f}, F1 {f1:.2f}"
                 )
 
-            if idx >= args.max:
-                break
-
             if res.upper().startswith("NO"):
                 if note:
                     fn += 1
