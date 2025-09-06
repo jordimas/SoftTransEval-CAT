@@ -30,7 +30,7 @@ logging.basicConfig(
 # -------------------------
 def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
     """Return a LangChain-compatible LLM depending on model_type."""
-    if model_type == "llama":
+    if model_type == "gemma3":
         return ChatLlamaCpp(
             temperature=temperature,
             model_path=model_path,
@@ -69,8 +69,8 @@ def get_args():
     parser.add_argument(
         "--model_type",
         type=str,
-        choices=["llama", "gpt", "gemini"],
-        default="llama",
+        choices=["gemma3", "gpt", "gemini"],
+        default="gemma3",
         help="Which backend to use",
     )
     parser.add_argument(
@@ -147,51 +147,50 @@ def load_strings(dataset: str):
 # -------------------------
 # Main
 # -------------------------
+
+    def calc_metrics(tp, fp, fn, elapsed, processed):
+        precision = tp / (tp + fp) if (tp + fp) else 0
+        recall = tp / (tp + fn) if (tp + fn) else 0
+        sets_per_min = (processed / elapsed * 60) if elapsed else 0
+        return precision, recall, sets_per_min
+
+
 if __name__ == "__main__":
     args = get_args()
 
     llm = load_llm(args.model_type, args.model_path)
-    prompt = load_prompt(args.prompt_version)
-    metadata = load_metadata(args.prompt_version)
+    prompt, metadata = load_prompt(args.prompt_version), load_metadata(args.prompt_version)
 
     dataset = "dataset/dataset.tmx"
     strings = load_strings(dataset)
     total_strings = min(len(strings), args.max)
 
-    tp = fp = fn = tn = 0
-    processed = 0
+    tp = fp = fn = tn = processed = 0
     start_time = time.time()
 
-    with open(
-        f"output/results-v{args.prompt_version}-{args.max}.txt",
-        "w",
-        encoding="utf-8",
-    ) as file:
+
+    with open(f"output/results--{args.max}-{args.model_type}-v{args.prompt_version}.txt", "w", encoding="utf-8") as file:
         for idx, (en, ca, note) in enumerate(strings, start=1):
             res = translate(llm, prompt, en, ca)
             processed += 1
 
             if idx % 10 == 0 or idx == args.max:
-                percent_done = (idx / total_strings) * 100
-                total_time = time.time() - start_time
-                precision = tp / (tp + fp) if (tp + fp) > 0 else 0
-                recall = tp / (tp + fn) if (tp + fn) > 0 else 0
-                set_sec = processed / total_time * 60 if total_time > 0 else 0
+                elapsed = time.time() - start_time
+                precision, recall, spm = calc_metrics(tp, fp, fn, elapsed, processed)
                 print(
-                    f"Progress: {percent_done:.2f}% - {idx}/{total_strings} | set/min: {set_sec:.2f}| "
-                    f"Time: {total_time:.2f}s | "
+                    f"Progress: {(idx/total_strings)*100:.2f}% - {idx}/{total_strings} | "
+                    f"set/min: {spm:.2f} | Time: {elapsed:.2f}s | "
                     f"TP: {tp}, TN: {tn}, FP: {fp}, FN: {fn} | "
                     f"Precision: {precision:.2f}, Recall: {recall:.2f}"
                 )
 
-            if idx > 0 and idx == args.max:
+            if idx >= args.max:
                 break
 
             if res.upper().startswith("NO"):
                 if note:
                     fn += 1
                     _write(en, ca, note, res, file, "fn")
-                    continue
                 else:
                     tn += 1
                 continue
@@ -208,23 +207,15 @@ if __name__ == "__main__":
 
     # Save stats
     csv = f"output/stats_{args.max}.csv"
-    precision = tp / (tp + fp) if (tp + fp) > 0 else 0
-    recall = tp / (tp + fn) if (tp + fn) > 0 else 0
+    precision, recall, _ = calc_metrics(tp, fp, fn, total_time, processed)
 
-    if os.path.exists(csv):
-        mode = "a"
-        write_header = False
-    else:
-        mode = "w"
-        write_header = True
-
-    goal = metadata["goal"]
+    mode, write_header = ("a", False) if os.path.exists(csv) else ("w", True)
     with open(csv, mode, encoding="utf-8") as fh:
         if write_header:
-            header = "date_time\tprompt_version\tgoal\ttp\tfp\tfn\ttn\tprecision\trecall\ttotal_time\tstrings"
-            fh.write(header + "\n")
-
+            fh.write("date_time\tprompt_version\tgoal\ttp\tfp\tfn\ttn\tprecision\trecall\ttotal_time\tstrings\n")
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        context = f"{now}\t{args.prompt_version}\t{goal}\t{tp}\t{fp}\t{fn}\t{tn}\t{precision:.2f}\t{recall:.2f}\t{total_time:.2f}\t{processed}"
-        fh.write(context + "\n")
+        fh.write(
+            f"{now}\t{args.prompt_version}\t{metadata['goal']}\t{tp}\t{fp}\t{fn}\t{tn}\t"
+            f"{precision:.2f}\t{recall:.2f}\t{total_time:.2f}\t{processed}\n"
+        )
 
