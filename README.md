@@ -2,6 +2,8 @@
 
 The goal of this repository is to evaluate and develop prompts for LLMs that can be used to review English-to-Catalan translations in the software localization domain.
 
+This work is used in real world scenarios in the context of reviewing open source translations.
+
 This repository includes three main components:
 
 - Evaluation dataset
