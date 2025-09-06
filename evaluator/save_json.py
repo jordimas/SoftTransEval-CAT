@@ -35,6 +35,7 @@ def save_json(
         "total_time": round(total_time, 2),
         "strings": processed,
     }
+    print(record)
 
     if os.path.exists(json_path):
         with open(json_path, "r", encoding="utf-8") as fh:

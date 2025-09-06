@@ -91,7 +91,7 @@ def load_metadata(model: str, prompt_version: str):
         with open(f"config/{model}/metadata.yml", "r") as fh:
             return yaml.safe_load(fh)[prompt_version]
     except Exception as e:
-        print("load_metadata. Error: {e}")
+        print(f"load_metadata. Error: {e}")
         return "Default prompt description"
 
 
