@@ -131,7 +131,7 @@ def _write(english: str, catalan: str, note: str, result: str, fh, status: str):
     print(content)
 
 
-def load_strings(dataset: str):
+def load_strings(dataset: str, max_entries = -1):
     with open(dataset, "rb") as file:
         tmx = tmxfile(file, "en", "ca")
     strings = []
@@ -143,6 +143,8 @@ def load_strings(dataset: str):
         if note:
             notes += 1
         strings.append((source, target, note))
+        if len(strings) == max_entries:
+            break
 
     total = len(strings)
     errors = notes
@@ -182,7 +184,7 @@ if __name__ == "__main__":
     )
 
     dataset = "dataset/dataset.tmx"
-    strings = load_strings(dataset)
+    strings = load_strings(dataset, args.max)
     total_strings = min(len(strings), args.max)
 
     tp = fp = fn = tn = processed = 0
