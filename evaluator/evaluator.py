@@ -88,10 +88,11 @@ def load_prompt(model: str, prompt_version: str):
 
 def load_metadata(model: str, prompt_version: str):
     try:
-        with open(f"config/{model}/metadatayml", "r") as fh:
+        with open(f"config/{model}/metadata.yml", "r") as fh:
             return yaml.safe_load(fh)[prompt_version]
     except Exception as e:
-        return {"goal": "Default prompt description"}
+        print("load_metadata. Error: {e}")
+        return "Default prompt description"
 
 
 # -------------------------
@@ -220,7 +221,7 @@ if __name__ == "__main__":
 
     total_time = time.time() - start_time
     prompt_version = args.prompt_version
-    prompt_comment = metadata["goal"]
+    prompt_comment = metadata
     save_json.save_json(
         args.model_type,
         prompt_version,
