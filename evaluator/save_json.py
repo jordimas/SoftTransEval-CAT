@@ -22,6 +22,7 @@ def save_json(
 
     record = {
         "date_time": now,
+        "model": model,
         "prompt_version": prompt_version,
         "prompt_comment": prompt_comment,
         "tp": tp,
