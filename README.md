@@ -11,8 +11,8 @@ This repository includes three main components:
 # Dataset
 
 The dataset has the following characteristics:
-- Human-curated translations
+- English - Catalan only
 - Contains 1,000 translations from the GNOME UI and documentation projects
-- Includes 10% translation errors (i.e., it is imbalanced), which have been corrected
+- Includes 10% translation errors (it is imbalanced), which have been review and corrected by humans
 
 
