@@ -89,6 +89,9 @@ def merge_tmx(file1, file2, file3, output):
             else:
                 print(f"Discard: {unit.source}")
 
+            if len(sources) >= 1000:
+                break
+
     # Save merged TMX
     with open(output, "wb") as f:
         tmx1.savefile(f)

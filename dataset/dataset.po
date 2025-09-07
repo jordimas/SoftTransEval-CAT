@@ -117,6 +117,21 @@ msgstr ""
 "Aixequeu i poseu el dit al lector per a inscriure la vostra empremta "
 "dactilar"
 
+msgid "Osmanya"
+msgstr "Osmanli"
+
+msgid "Saturdays"
+msgstr "Dissabte"
+
+msgid "The pack direction of the menubar"
+msgstr "La direcció de l'empaquetament de la barra d'eines"
+
+msgid "Document has been changed after signing."
+msgstr "El document ha canviar després de ser signat."
+
+msgid "Edit Event"
+msgstr "Afegeix una cita"
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -1134,9 +1149,6 @@ msgstr "Arch A"
 
 msgid "prc2 Envelope"
 msgstr "Sobre prc2"
-
-msgid "Osmanya"
-msgstr "Osmanli"
 
 msgid "Grantha"
 msgstr "Grantha"
@@ -4812,22 +4824,3 @@ msgstr ""
 
 msgid "Optionally, change the folder into which the gallery will be saved."
 msgstr "Teniu l'opció de canviar la carpeta a la qual es desarà la galeria."
-
-msgid "You can adjust the volume in the bottom right corner:"
-msgstr "Podeu ajustar el volum a la part inferior dreta de la finestra:"
-
-msgid ""
-"Adjust size and font of subtitles to your needs. See "
-"<guiseq><gui>General</gui><gui>External Subtitles</gui></guiseq> section on "
-"<link xref=\"preferences\"/> page."
-msgstr ""
-"Ajusteu la mida i el tipus de lletra dels subtítols d'acord amb les vostres "
-"necessitats. Vegeu la secció <guiseq><gui>General</gui> <gui>Subtítols "
-"externs</gui></guiseq> a la pàgina de Preferències <link "
-"xref=\"preferences\"/>."
-
-msgid "I cannot play my DVD."
-msgstr "No puc reproduir el meu DVD."
-
-msgid "Make the video bigger and make it keep the correct proportions."
-msgstr "Amplieu el vídeo i assigneu les proporcions correctes."

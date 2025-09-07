@@ -4,7 +4,7 @@
   <header segtype="sentence" o-tmf="UTF-8" adminlang="en" srclang="en" datatype="PlainText">
       <prop type="author">Softcatalà</prop>
       <prop type="description">Corpus of real translation errros in computer programs</prop>
-  </header>      
+  </header>
   <body>
     <tu>
       <tuv xml:lang="en">
@@ -23,9 +23,9 @@
       <tuv xml:lang=" ca">
         <seg>Copia amb aquest camp els fitxers seleccionats</seg>
       </tuv>
-      <note>'Copia' should be 'Etiqueta'</note>      
+      <note>'Copia' should be 'Etiqueta'</note>
     </tu>
-      
+
     <tu>
       <tuv xml:lang="en">
         <seg>No data to parse</seg>
@@ -45,7 +45,7 @@
       </tuv>
       <note>'RELACIÓ' should be 'LLISTA'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Color</seg>
@@ -63,9 +63,9 @@
       <tuv xml:lang=" ca">
         <seg>Exponencial [^ o **]</seg>
       </tuv>
-      <note>'exponent' should be 'potència'</note>      
+      <note>'exponent' should be 'potència'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Allow CPU Throttling</seg>
@@ -75,7 +75,7 @@
       </tuv>
       <note>'acceleració' should be 'limitació'</note>
     </tu>
-        
+
     <tu>
       <tuv xml:lang="en">
         <seg>Crawling single directory “%s”</seg>
@@ -83,9 +83,9 @@
       <tuv xml:lang=" ca">
         <seg>S'està arrossegant el directori «%s»</seg>
       </tuv>
-      <note>'arrossegant' should be 'rastrejant'</note>          
+      <note>'arrossegant' should be 'rastrejant'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Execute the current line, stepping over any function calls</seg>
@@ -95,7 +95,7 @@
       </tuv>
       <note>'entrarà pas a pas' should be 'es passarà'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>left right double arrow</seg>
@@ -103,9 +103,9 @@
       <tuv xml:lang=" ca">
         <seg>fletxa doble dreta esquerra</seg>
       </tuv>
-      <note>'dreta esquerra' should be 'esquerra-detra'</note>            
+      <note>'dreta esquerra' should be 'esquerra-detra'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Failed to initialize trust list: %s</seg>
@@ -135,7 +135,7 @@
       </tuv>
       <note>'pel·lícula' should be 'pel·lícules'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Merge the blank page with your PDF document using &lt;app&gt;PDF-Shuffler&lt;/app&gt; placing the blank page at the end.</seg>
@@ -193,9 +193,9 @@
       <tuv xml:lang=" ca">
         <seg>Consulta el Devhelp</seg>
       </tuv>
-        <note>'Consulta el' should be 'Suport per a'</note>
+      <note>'Consulta el' should be 'Suport per a'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Repeatedly lift and place your finger on the reader to enroll your fingerprint</seg>
@@ -203,7 +203,57 @@
       <tuv xml:lang=" ca">
         <seg>Aixequeu i poseu el dit al lector per a inscriure la vostra empremta dactilar</seg>
       </tuv>
-        <note>'Repeatedly' is missing</note>      
+      <note>'Repeatedly' is missing</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Osmanya</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Osmanli</seg>
+      </tuv>
+      <note>'Osmanya' is a region in Somalia, while 'Osmanli' refers to the Ottoman Empire</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Saturdays</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Dissabte</seg>
+      </tuv>
+      <note>'Dissabte' should be plural</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>The pack direction of the menubar</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>La direcció de l'empaquetament de la barra d'eines</seg>
+      </tuv>
+      <note>'barra d'eines' should be 'barra de menú'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Document has been changed after signing.</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>El document ha canviar després de ser signat.</seg>
+      </tuv>
+    </tu>
+    <note>'canviar' should be 'canviat'</note>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Edit Event</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Afegeix una cita</seg>
+      </tuv>
+     <note>'Afegeix' should be 'Edit'</note>
     </tu>
 
   <tu>
@@ -2644,14 +2694,6 @@ smb://servidor/recurs/fitxer.txt com a ubicació</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Sobre prc2</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Osmanya</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Osmanli</seg>
       </tuv>
     </tu>
     <tu>
@@ -8067,37 +8109,5 @@ XSession=gnome-classic</seg>
         <seg>Teniu l'opció de canviar la carpeta a la qual es desarà la galeria.</seg>
       </tuv>
     </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>You can adjust the volume in the bottom right corner:</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Podeu ajustar el volum a la part inferior dreta de la finestra:</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Adjust size and font of subtitles to your needs. See &lt;guiseq&gt;&lt;gui&gt;General&lt;/gui&gt;&lt;gui&gt;External Subtitles&lt;/gui&gt;&lt;/guiseq&gt; section on &lt;link xref="preferences"/&gt; page.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Ajusteu la mida i el tipus de lletra dels subtítols d'acord amb les vostres necessitats. Vegeu la secció &lt;guiseq&gt;&lt;gui&gt;General&lt;/gui&gt; &lt;gui&gt;Subtítols externs&lt;/gui&gt;&lt;/guiseq&gt; a la pàgina de Preferències &lt;link xref="preferences"/&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>I cannot play my DVD.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>No puc reproduir el meu DVD.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Make the video bigger and make it keep the correct proportions.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Amplieu el vídeo i assigneu les proporcions correctes.</seg>
-      </tuv>
-    </tu>
-  </body>
+    </body>
 </tmx>
