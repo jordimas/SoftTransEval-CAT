@@ -4,7 +4,7 @@
   <header segtype="sentence" o-tmf="UTF-8" adminlang="en" srclang="en" datatype="PlainText">
       <prop type="author">Softcatalà</prop>
       <prop type="description">Corpus of real translation errros in computer programs</prop>
-  </header>      
+  </header>
   <body>
     <tu>
       <tuv xml:lang="en">
@@ -23,9 +23,9 @@
       <tuv xml:lang=" ca">
         <seg>Copia amb aquest camp els fitxers seleccionats</seg>
       </tuv>
-      <note>'Copia' should be 'Etiqueta'</note>      
+      <note>'Copia' should be 'Etiqueta'</note>
     </tu>
-      
+
     <tu>
       <tuv xml:lang="en">
         <seg>No data to parse</seg>
@@ -45,7 +45,7 @@
       </tuv>
       <note>'RELACIÓ' should be 'LLISTA'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Color</seg>
@@ -63,9 +63,9 @@
       <tuv xml:lang=" ca">
         <seg>Exponencial [^ o **]</seg>
       </tuv>
-      <note>'exponent' should be 'potència'</note>      
+      <note>'exponent' should be 'potència'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Allow CPU Throttling</seg>
@@ -75,7 +75,7 @@
       </tuv>
       <note>'acceleració' should be 'limitació'</note>
     </tu>
-        
+
     <tu>
       <tuv xml:lang="en">
         <seg>Crawling single directory “%s”</seg>
@@ -83,9 +83,9 @@
       <tuv xml:lang=" ca">
         <seg>S'està arrossegant el directori «%s»</seg>
       </tuv>
-      <note>'arrossegant' should be 'rastrejant'</note>          
+      <note>'arrossegant' should be 'rastrejant'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Execute the current line, stepping over any function calls</seg>
@@ -95,7 +95,7 @@
       </tuv>
       <note>'entrarà pas a pas' should be 'es passarà'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>left right double arrow</seg>
@@ -103,9 +103,9 @@
       <tuv xml:lang=" ca">
         <seg>fletxa doble dreta esquerra</seg>
       </tuv>
-      <note>'dreta esquerra' should be 'esquerra-detra'</note>            
+      <note>'dreta esquerra' should be 'esquerra-detra'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Failed to initialize trust list: %s</seg>
@@ -135,7 +135,7 @@
       </tuv>
       <note>'pel·lícula' should be 'pel·lícules'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Merge the blank page with your PDF document using &lt;app&gt;PDF-Shuffler&lt;/app&gt; placing the blank page at the end.</seg>
@@ -195,7 +195,7 @@
       </tuv>
         <note>'Consulta el' should be 'Suport per a'</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Repeatedly lift and place your finger on the reader to enroll your fingerprint</seg>
@@ -203,9 +203,9 @@
       <tuv xml:lang=" ca">
         <seg>Aixequeu i poseu el dit al lector per a inscriure la vostra empremta dactilar</seg>
       </tuv>
-        <note>'Repeatedly' is missing</note> 
+        <note>'Repeatedly' is missing</note>
     </tu>
-    
+
     <tu>
       <tuv xml:lang="en">
         <seg>Osmanya</seg>
@@ -213,9 +213,9 @@
       <tuv xml:lang=" ca">
         <seg>Osmanli</seg>
       </tuv>
-      <note>'Osmanya' is a region in Somalia, while 'Osmanli' refers to the Ottoman Empire</note>      
+      <note>'Osmanya' is a region in Somalia, while 'Osmanli' refers to the Ottoman Empire</note>
     </tu>
-        
+
   </body>
 </tmx>
 
