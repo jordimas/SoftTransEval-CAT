@@ -32,7 +32,7 @@ def save_json(
         "precision": round(precision, 2),
         "recall": round(recall, 2),
         "f1": round(f1, 2),
-        "time": round(total_time, 2),
+        "time": round(total_time, 0),
     }
 
     if os.path.exists(json_path):
