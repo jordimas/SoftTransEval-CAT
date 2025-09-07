@@ -193,7 +193,7 @@
       <tuv xml:lang=" ca">
         <seg>Consulta el Devhelp</seg>
       </tuv>
-        <note>'Consulta el' should be 'Suport per a'</note>
+      <note>'Consulta el' should be 'Suport per a'</note>
     </tu>
 
     <tu>
@@ -203,7 +203,7 @@
       <tuv xml:lang=" ca">
         <seg>Aixequeu i poseu el dit al lector per a inscriure la vostra empremta dactilar</seg>
       </tuv>
-        <note>'Repeatedly' is missing</note>
+      <note>'Repeatedly' is missing</note>
     </tu>
 
     <tu>
