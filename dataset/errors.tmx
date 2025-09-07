@@ -203,9 +203,19 @@
       <tuv xml:lang=" ca">
         <seg>Aixequeu i poseu el dit al lector per a inscriure la vostra empremta dactilar</seg>
       </tuv>
-        <note>'Repeatedly' is missing</note>      
+        <note>'Repeatedly' is missing</note> 
     </tu>
-
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Osmanya</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Osmanli</seg>
+      </tuv>
+      <note>'Osmanya' is a region in Somalia, while 'Osmanli' refers to the Ottoman Empire</note>      
+    </tu>
+        
   </body>
 </tmx>
 
