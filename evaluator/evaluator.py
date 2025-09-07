@@ -187,7 +187,7 @@ if __name__ == "__main__":
     start_time = time.time()
 
     with open(
-        f"output/results--{args.max}-{args.model_type}-v{args.prompt_version}.txt",
+        f"output/results-{args.max}-{args.model_type}-v{args.prompt_version}.txt",
         "w",
         encoding="utf-8",
     ) as file:
