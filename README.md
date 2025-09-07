@@ -18,7 +18,7 @@ The dataset has the following characteristics:
 - Includes 10% translation errors (it is imbalanced), which have been review and corrected by humans
 
 # Evaluation of differents prompt
-| model | prompt_version | prompt_comment | tp | fp | fn | tn | precision | recall | f1 | total_time |
+| model | p. version | p. comment | tp | fp | fn | tn | precision | recall | f1 | total_time |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | gemma3 | 1 | This is the baseline | 11 | 14 | 9 | 166 | 0.44 | 0.55 | 0.49 | 1702.62 |
 | gemma3 | 2 | Pure instructions prompt | 10 | 7 | 10 | 173 | 0.59 | 0.5 | 0.54 | 1588.4 |
