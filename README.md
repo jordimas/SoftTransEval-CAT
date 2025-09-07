@@ -19,7 +19,7 @@ The dataset has the following characteristics:
 
 # Evaluation of differents prompt
 
-| date_time | model | prompt_version | prompt_comment | tp | fp | fn | tn | precision | recall | f1 | total_time | strings |
+| date_time | model | Version | Comment | tp | fp | fn | tn | precision | recall | f1 | total_time | strings |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2025-09-06 17:54:56 | gemma3 | 1 | This is the baseline | 11 | 14 | 9 | 166 | 0.44 | 0.55 | 0.49 | 1702.62 | 200 |
 | 2025-09-06 18:21:28 | gemma3 | 2 | Pure instructions prompt | 10 | 7 | 10 | 173 | 0.59 | 0.5 | 0.54 | 1588.4 | 200 |
