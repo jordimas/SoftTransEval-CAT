@@ -23,8 +23,8 @@ def save_json(
     record = {
         "date_time": now,
         "model": model,
-        "prompt_version": prompt_version,
-        "prompt_comment": prompt_comment,
+        "version": prompt_version,
+        "comment": prompt_comment,
         "tp": tp,
         "fp": fp,
         "fn": fn,
@@ -32,7 +32,7 @@ def save_json(
         "precision": round(precision, 2),
         "recall": round(recall, 2),
         "f1": round(f1, 2),
-        "total_time": round(total_time, 2),
+        "time": round(total_time, 2),
     }
 
     if os.path.exists(json_path):
