@@ -2,42 +2,50 @@ import json
 import sys
 from pathlib import Path
 
-# Check for command-line argument
-if len(sys.argv) < 2:
-    print("Usage: python json_to_md.py <path_to_json_file>")
-    sys.exit(1)
+def load_json(path: Path):
+    if not path.is_file():
+        raise FileNotFoundError(f"File not found: {path}")
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    if not isinstance(data, list) or not all(isinstance(d, dict) for d in data):
+        raise ValueError("Input JSON must be a list of objects")
+    return data
 
-json_path = Path(sys.argv[1])
+def build_md_table(data: list[dict], headers: list[str]) -> str:
+    lines = [
+        "| " + " | ".join(headers) + " |",
+        "| " + " | ".join(["---"] * len(headers)) + " |"
+    ]
+    for row in data:
+        lines.append("| " + " | ".join(str(row.get(h, "")) for h in headers) + " |")
+    return "\n".join(lines)
 
-# Ensure file exists
-if not json_path.is_file():
-    print(f"File not found: {json_path}")
-    sys.exit(1)
+def save_md(content: str, path: Path):
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
 
-# Load JSON data
-with open(json_path, "r") as f:
-    data = json.load(f)
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python json_to_md.py <path_to_json_file>")
+        sys.exit(1)
 
-# Validate JSON structure
-if not isinstance(data, list) or not all(isinstance(d, dict) for d in data):
-    raise ValueError("Input JSON must be a list of objects")
+    json_path = Path(sys.argv[1])
+    data = load_json(json_path)
 
-# Extract headers
-headers = list(data[0].keys())
+    # Full version
+    all_headers = list(data[0].keys())
+    full_md = build_md_table(data, all_headers)
+    save_md(full_md, json_path.with_suffix(".md"))
+    print(f"Full Markdown table written to {json_path.with_suffix('.md')}")
 
-# Build Markdown table
-md_lines = []
-md_lines.append("| " + " | ".join(headers) + " |")
-md_lines.append("| " + " | ".join(["---"] * len(headers)) + " |")
+    small_headers = [h for h in all_headers if h not in ["date_time", "strings"]]
+    if small_headers:
+        small_md = build_md_table(data, small_headers)
+        save_md(small_md, json_path.with_name(json_path.stem + "_small.md"))
+        print(f"Small Markdown table written to {json_path.with_name(json_path.stem + '_small.md')}")
+    else:
+        print("No columns A, B, C found in JSON. Skipping small version.")
 
-for row in data:
-    md_lines.append("| " + " | ".join(str(row.get(h, "")) for h in headers) + " |")
+if __name__ == "__main__":
+    main()
 
-# Determine output Markdown file path
-md_path = json_path.with_suffix(".md")
-
-# Write to Markdown file
-with open(md_path, "w") as f:
-    f.write("\n".join(md_lines))
-
-print(f"Markdown table written to {md_path}")
