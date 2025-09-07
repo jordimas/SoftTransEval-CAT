@@ -12,6 +12,8 @@ This repository includes three main components:
 
 # Dataset
 
+Dataset is at [dataset/dataset.tmx](dataset/dataset.tmx) file.
+
 The dataset has the following characteristics:
 - English - Catalan only
 - Contains 1,000 translations from the GNOME UI and documentation projects
