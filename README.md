@@ -17,7 +17,10 @@ The dataset has the following characteristics:
 - Contains 1,000 translations from the GNOME UI and documentation projects
 - Includes 10% translation errors (it is imbalanced), which have been review and corrected by humans
 
-# Evaluation of differents prompt
+# Evaluation of differents prompts
+
+Prompts are in [config/](config/) directory.
+
 | model | version | comment | tp | fp | fn | tn | precision | recall | f1 | time |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | gemma3 | 1 | This is the baseline | 11 | 14 | 9 | 166 | 0.44 | 0.55 | 0.49 | 1702.62 |
@@ -29,3 +32,11 @@ The dataset has the following characteristics:
 | gemma3 | 3_2 | Prompt with samples v2.2 | 8 | 85 | 12 | 95 | 0.09 | 0.4 | 0.14 | 1701.67 |
 | gemma3 | 4 | Super simple prompt | 15 | 36 | 5 | 144 | 0.29 | 0.75 | 0.42 | 7969.02 |
 | gemma3 | 5 | Categorization prompt | 16 | 51 | 4 | 129 | 0.24 | 0.8 | 0.37 | 6007.84 |
+
+Legend:
+- version: version of the prompt
+- comment: comment that describes the prompt
+- tp: true positive
+- fp: false positive
+- fn: false negative
+- tn: true positive
