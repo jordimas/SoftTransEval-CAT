@@ -132,6 +132,9 @@ msgstr "El document ha canviar després de ser signat."
 msgid "Edit Event"
 msgstr "Afegeix una cita"
 
+msgid "Failed to cache account"
+msgstr "S'ha produït un error en desar el compte"
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -716,9 +719,6 @@ msgstr "Formes terminals #2"
 
 msgid "Reph Forms"
 msgstr "Formes Reph"
-
-msgid "Failed to cache account"
-msgstr "S'ha produït un error en desar el compte"
 
 msgid ""
 "This is a weak password. Try to use more special characters, like "

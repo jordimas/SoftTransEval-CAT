@@ -256,6 +256,16 @@
       </tuv>
      <note>'Afegeix' should be 'Edit'</note>
     </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Failed to cache account</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>S'ha produït un error en desar el compte</seg>
+      </tuv>
+     <note>'desar' should be 'desar en memòria cau'</note>
+    </tu>
 
   </body>
 </tmx>

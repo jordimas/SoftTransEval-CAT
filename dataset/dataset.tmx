@@ -243,8 +243,9 @@
       <tuv xml:lang="ca">
         <seg>El document ha canviar després de ser signat.</seg>
       </tuv>
+      <note>'canviar' should be 'canviat'</note>
     </tu>
-    <note>'canviar' should be 'canviat'</note>
+
 
     <tu>
       <tuv xml:lang="en">
@@ -254,6 +255,16 @@
         <seg>Afegeix una cita</seg>
       </tuv>
      <note>'Afegeix' should be 'Edit'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Failed to cache account</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>S'ha produït un error en desar el compte</seg>
+      </tuv>
+     <note>'desar' should be 'desar en memòria cau'</note>
     </tu>
 
   <tu>
@@ -1654,14 +1665,6 @@ smb://servidor/recurs/fitxer.txt com a ubicació</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Formes Reph</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Failed to cache account</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>S'ha produït un error en desar el compte</seg>
       </tuv>
     </tu>
     <tu>
