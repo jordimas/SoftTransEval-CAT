@@ -243,8 +243,9 @@
       <tuv xml:lang="ca">
         <seg>El document ha canviar després de ser signat.</seg>
       </tuv>
+      <note>'canviar' should be 'canviat'</note>
     </tu>
-    <note>'canviar' should be 'canviat'</note>
+
 
     <tu>
       <tuv xml:lang="en">
