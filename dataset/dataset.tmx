@@ -267,6 +267,26 @@
      <note>'desar' should be 'desar en memòria cau'</note>
     </tu>
 
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Section</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Selecció</seg>
+      </tuv>
+     <note>'Selecció' should be 'Secció'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Open a new Manuals window</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Obre una nova del Manuals</seg>
+      </tuv>
+     <note>'nova' should be 'nova finestra'</note>
+    </tu>
+
   <tu>
       <tuv xml:lang="en">
         <seg>Audio Player</seg>
@@ -8094,22 +8114,6 @@ XSession=gnome-classic</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Seleccioneu la casella &lt;gui&gt;Carrega els fitxers de subtítol quan es carrega una pel·lícula&lt;/gui&gt; si voleu carregar els fitxers de subtítol automàticament.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Choose the type of &lt;gui&gt;Audio Output&lt;/gui&gt; from the drop-down list.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Escolliu el tipus de &lt;gui&gt;Sortida d'àudio&lt;/gui&gt; a la llista desplegable.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Optionally, change the folder into which the gallery will be saved.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Teniu l'opció de canviar la carpeta a la qual es desarà la galeria.</seg>
       </tuv>
     </tu>
     </body>

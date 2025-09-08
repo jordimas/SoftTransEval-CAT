@@ -135,6 +135,12 @@ msgstr "Afegeix una cita"
 msgid "Failed to cache account"
 msgstr "S'ha produït un error en desar el compte"
 
+msgid "Section"
+msgstr "Selecció"
+
+msgid "Open a new Manuals window"
+msgstr "Obre una nova del Manuals"
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -4817,10 +4823,3 @@ msgstr ""
 "Seleccioneu la casella <gui>Carrega els fitxers de subtítol quan es carrega "
 "una pel·lícula</gui> si voleu carregar els fitxers de subtítol "
 "automàticament."
-
-msgid "Choose the type of <gui>Audio Output</gui> from the drop-down list."
-msgstr ""
-"Escolliu el tipus de <gui>Sortida d'àudio</gui> a la llista desplegable."
-
-msgid "Optionally, change the folder into which the gallery will be saved."
-msgstr "Teniu l'opció de canviar la carpeta a la qual es desarà la galeria."

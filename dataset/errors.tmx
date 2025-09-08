@@ -267,6 +267,26 @@
      <note>'desar' should be 'desar en memòria cau'</note>
     </tu>
 
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Section</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Selecció</seg>
+      </tuv>
+     <note>'Selecció' should be 'Secció'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Open a new Manuals window</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Obre una nova del Manuals</seg>
+      </tuv>
+     <note>'nova' should be 'nova finestra'</note>
+    </tu>
+
   </body>
 </tmx>
 
