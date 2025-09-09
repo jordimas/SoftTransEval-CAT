@@ -190,6 +190,9 @@ msgstr ""
 msgid "Add a custom MIME type for individual users"
 msgstr "Afegir un MIME personalitzat per a usuaris individuals"
 
+msgid "Delay between repeats in milliseconds."
+msgstr "Retard entre repeticions mil·lisegons."
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -4815,11 +4818,3 @@ msgstr ""
 
 msgid "You can navigate while watching the movie:"
 msgstr "Podeu navegar mentre mireu la pel·lícula:"
-
-msgid ""
-"Tick the option <gui>Load subtitle files when movie is loaded</gui> if you "
-"want subtitles to be loaded automatically."
-msgstr ""
-"Seleccioneu la casella <gui>Carrega els fitxers de subtítol quan es carrega "
-"una pel·lícula</gui> si voleu carregar els fitxers de subtítol "
-"automàticament."

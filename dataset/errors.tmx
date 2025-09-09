@@ -389,10 +389,10 @@
 
     <tu>
       <tuv xml:lang="en">
-        <seg>Delay between repeats in milliseconds./seg>
+        <seg>Delay between repeats in milliseconds.</seg>
       </tuv>
       <tuv xml:lang=" ca">
-        <seg>Retard entre repeticions mil·lisegons./seg>
+        <seg>Retard entre repeticions mil·lisegons.</seg>
       </tuv>
      <note>'mil·lisegons.' should be 'en mil·lisegons.'</note>
     </tu>

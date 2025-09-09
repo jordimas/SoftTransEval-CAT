@@ -387,6 +387,16 @@
      <note>'suggerggi' should be 'suggereixi'</note>
     </tu>
 
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Delay between repeats in milliseconds.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Retard entre repeticions mil·lisegons.</seg>
+      </tuv>
+     <note>'mil·lisegons.' should be 'en mil·lisegons.'</note>
+    </tu>
+
   <tu>
       <tuv xml:lang="en">
         <seg>Audio Player</seg>
@@ -8126,14 +8136,6 @@ XSession=gnome-classic</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Podeu navegar mentre mireu la pel·lícula:</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Tick the option &lt;gui&gt;Load subtitle files when movie is loaded&lt;/gui&gt; if you want subtitles to be loaded automatically.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Seleccioneu la casella &lt;gui&gt;Carrega els fitxers de subtítol quan es carrega una pel·lícula&lt;/gui&gt; si voleu carregar els fitxers de subtítol automàticament.</seg>
       </tuv>
     </tu>
     </body>
