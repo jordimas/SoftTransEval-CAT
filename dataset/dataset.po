@@ -172,6 +172,24 @@ msgstr ""
 "l'esquerra i a continuació deixeu anar el botó central, navegareu cap a la "
 "pàgina anterior."
 
+msgid "Downloads folder"
+msgstr "Carpeta de baixada"
+
+msgid "Adjust selected attribute"
+msgstr "Ajusta els atributs seleccionats"
+
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use"
+" of the work)."
+msgstr ""
+"Heu de reconèixer l'autoria del material de la forma especificada per "
+"l'autor o llicenciant (però no d'una manera que suggerggi que el "
+"llicenciador us dona suport o patrocina l'ús que en feu)."
+
+msgid "Add a custom MIME type for individual users"
+msgstr "Afegir un MIME personalitzat per a usuaris individuals"
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -881,9 +899,6 @@ msgstr "«https://ca.wikipedia.org/wiki/Programari_de_propietat»"
 msgid "No information regarding sharing of physical location with other users"
 msgstr ""
 "No hi ha informació sobre ús compartit d'ubicació física amb altres usuaris"
-
-msgid "Downloads folder"
-msgstr "Carpeta de baixada"
 
 msgid "Can access some specific files"
 msgstr "Pot accedir a alguns fitxers específics"
@@ -1678,9 +1693,6 @@ msgstr "només lectura"
 msgid "Only speak displayed text"
 msgstr "Pronuncia únicament el text que es mostra"
 
-msgid "Adjust selected attribute"
-msgstr "Ajusta els atributs seleccionats"
-
 msgid "left"
 msgstr "esquerra"
 
@@ -2147,15 +2159,6 @@ msgstr ""
 "apareixerà una finestra que us demanarà que introduïu la contrasenya del "
 "document. Introduïu la contrasenya i feu clic a <gui>Desbloqueja el "
 "document</gui>."
-
-msgid ""
-"You must attribute the work in the manner specified by the author or "
-"licensor (but not in any way that suggests that they endorse you or your use"
-" of the work)."
-msgstr ""
-"Heu de reconèixer l'autoria del material de la forma especificada per "
-"l'autor o llicenciant (però no d'una manera que suggereixi que el "
-"llicenciador us dona suport o patrocina l'ús que en feu)."
 
 msgid "Type the numbers of the remaining pages in this order: 6, 3, 4, 5"
 msgstr ""
@@ -4743,9 +4746,6 @@ msgstr ""
 "MimeType=application/x-newtype\n"
 "Name=<var>My Application 1</var>\n"
 "Exec=<var>myapplication1</var>"
-
-msgid "Add a custom MIME type for individual users"
-msgstr "Afegir un MIME personalitzat per a usuaris individuals"
 
 msgid ""
 "In GNOME, MIME (<em>Multipurpose Internet Mail Extension</em>) types are "

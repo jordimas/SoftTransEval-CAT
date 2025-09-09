@@ -153,7 +153,7 @@
       <tuv xml:lang=" ca">
         <seg>Si s'ha definit, l'assistent vinculat a aquesta clau del GConf s'iniciarà amb la interfície gràfica del GDM. De forma predeterminada és un lector de pantalla.</seg>
       </tuv>
-      <note>'l'assistent' should be 'eines assistives'</note>
+      <note>'l'assistent' should be 'eines de suport'</note>
     </tu>
 
     <tu>
@@ -345,6 +345,46 @@
         <seg>Si manteniu premut el botó central del ratolí, l'arrossegueu cap a l'esquerra i a continuació deixeu anar el botó central, navegareu cap a la pàgina anterior.</seg>
       </tuv>
      <note>'pàgina anterior' should be 'cap enrrere'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Downloads folder</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Carpeta de baixada</seg>
+      </tuv>
+     <note>'baixada' should be 'baixades'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Adjust selected attribute</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Ajusta els atributs seleccionats</seg>
+      </tuv>
+     <note>'atributs seleccionats' should be 'atribut seleccionat'</note>
+    </tu>
+
+    <tu>    
+      <tuv xml:lang="en">
+        <seg>You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Heu de reconèixer l'autoria del material de la forma especificada per l'autor o llicenciant (però no d'una manera que suggerggi que el llicenciador us dona suport o patrocina l'ús que en feu).</seg>
+      </tuv>
+     <note>'suggerggi' should be 'suggereixi'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Add a custom MIME type for individual users</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Afegir un MIME personalitzat per a usuaris individuals</seg>
+      </tuv>
+     <note>'suggerggi' should be 'suggereixi'</note>
     </tu>
 
   <tu>
@@ -2041,14 +2081,6 @@ smb://servidor/recurs/fitxer.txt com a ubicació</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>No hi ha informació sobre ús compartit d'ubicació física amb altres usuaris</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Downloads folder</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Carpeta de baixada</seg>
       </tuv>
     </tu>
     <tu>
@@ -4063,14 +4095,6 @@ L'error ha sigut: %s</seg>
     </tu>
     <tu>
       <tuv xml:lang="en">
-        <seg>Adjust selected attribute</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Ajusta els atributs seleccionats</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
         <seg>left</seg>
       </tuv>
       <tuv xml:lang=" ca">
@@ -4702,14 +4726,6 @@ Quique Serrano &lt;qserrano@outlook.com&gt;</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Si intenteu obrir un document PDF que està protegit amb una contrasenya, apareixerà una finestra que us demanarà que introduïu la contrasenya del document. Introduïu la contrasenya i feu clic a &lt;gui&gt;Desbloqueja el document&lt;/gui&gt;.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Heu de reconèixer l'autoria del material de la forma especificada per l'autor o llicenciant (però no d'una manera que suggereixi que el llicenciador us dona suport o patrocina l'ús que en feu).</seg>
       </tuv>
     </tu>
     <tu>
@@ -7986,14 +8002,6 @@ Type=Application
 MimeType=application/x-newtype
 Name=&lt;var&gt;My Application 1&lt;/var&gt;
 Exec=&lt;var&gt;myapplication1&lt;/var&gt;</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Add a custom MIME type for individual users</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Afegir un MIME personalitzat per a usuaris individuals</seg>
       </tuv>
     </tu>
     <tu>
