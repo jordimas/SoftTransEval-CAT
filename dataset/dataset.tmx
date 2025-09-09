@@ -286,6 +286,66 @@
       </tuv>
      <note>'nova' should be 'nova finestra'</note>
     </tu>
+    
+    <tu>    
+      <tuv xml:lang="en">
+        <seg>squared plus</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>més enquadrat</seg>
+      </tuv>
+     <note>'squared plus' should be 'al quadrat més'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Failed to add to uninstall for addon ‘%s’: %s</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>No s'ha pogut afegir al complement «%s»: %s</seg>
+      </tuv>
+     <note>'afegir' should be 'desinstal·lar'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>The screen locks itself too quickly</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>La pantalla es tanca massa ràpidament</seg>
+      </tuv>
+     <note>'tanca' should be 'bloqueja'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>&lt;em&gt;dirty&lt;/em&gt; pages have been modified while in memory and must be written to disk when designated to be swapped out</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>&lt;em&gt;brutes&lt;/em&gt; les pàgines s'han modificat en memòria i s'han d'escriure al disc quan s'assenyalen per a ser intercanviades</seg>
+      </tuv>
+     <note>'brutes les pàgines' should be 'pàgines brutes'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Refer to the "Security" section for information about security concerns when using XDMCP.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Consulteu la secció «Seguretat» per a obtenir més informació sobre les notes de seguretat quan s'utilitza l'XDMCP.</seg>
+      </tuv>
+     <note>'notes de seguretat' should be 'preocupacions de seguretat'</note>
+    </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Holding the middle mouse button, dragging left, and then releasing the middle mouse button will navigate backward.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Si manteniu premut el botó central del ratolí, l'arrossegueu cap a l'esquerra i a continuació deixeu anar el botó central, navegareu cap a la pàgina anterior.</seg>
+      </tuv>
+     <note>'pàgina anterior' should be 'cap enrrere'</note>
+    </tu>
 
   <tu>
       <tuv xml:lang="en">
@@ -2093,14 +2153,6 @@ smb://servidor/recurs/fitxer.txt com a ubicació</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Microprogramari del dispositiu</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Failed to add to uninstall for addon ‘%s’: %s</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>No s'ha pogut afegir al complement «%s»: %s</seg>
       </tuv>
     </tu>
     <tu>
@@ -3915,14 +3967,6 @@ L'error ha sigut: %s</seg>
     </tu>
     <tu>
       <tuv xml:lang="en">
-        <seg>squared plus</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>més enquadrat</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
         <seg>equal to or less than</seg>
       </tuv>
       <tuv xml:lang=" ca">
@@ -4486,14 +4530,6 @@ Quique Serrano &lt;qserrano@outlook.com&gt;</seg>
     </tu>
     <tu>
       <tuv xml:lang="en">
-        <seg>Holding the middle mouse button, dragging left, and then releasing the middle mouse button will navigate backward.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Si manteniu premut el botó central del ratolí, l'arrossegueu cap a l'esquerra i a continuació deixeu anar el botó central, navegareu cap a la pàgina anterior.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
         <seg>You can use a proxy server for browsing the web. To use a web proxy when browsing, you need to &lt;link href="help:gnome-help/net-proxy"&gt;set it up in the GNOME &lt;gui&gt;Network&lt;/gui&gt; settings panel&lt;/link&gt;.</seg>
       </tuv>
       <tuv xml:lang=" ca">
@@ -4866,14 +4902,6 @@ Quique Serrano &lt;qserrano@outlook.com&gt;</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>El navegador d'imatges admet la «cerca en teclejar» que canvia dinàmicament la selecció de cares mentre l'usuari introdueix el nom d'usuari corresponent a la llista. Això significa que un usuari amb un nom d'usuari llarg només haurà d'introduir els primers caràcters del nom d'usuari abans que l'element correcte de la llista estigui seleccionat.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Refer to the "Security" section for information about security concerns when using XDMCP.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Consulteu la secció «Seguretat» per a obtenir més informació sobre les notes de seguretat quan s'utilitza l'XDMCP.</seg>
       </tuv>
     </tu>
     <tu>
@@ -6898,14 +6926,6 @@ PostSession/
     </tu>
     <tu>
       <tuv xml:lang="en">
-        <seg>The screen locks itself too quickly</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>La pantalla es tanca massa ràpidament</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
         <seg>Make sure that &lt;link xref="bluetooth-turn-on-off"&gt;&lt;gui&gt;Bluetooth&lt;/gui&gt; is switched on&lt;/link&gt;.</seg>
       </tuv>
       <tuv xml:lang=" ca">
@@ -7462,14 +7482,6 @@ PostSession/
       </tuv>
       <tuv xml:lang=" ca">
         <seg>&lt;gui&gt;s&lt;/gui&gt;</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>&lt;em&gt;dirty&lt;/em&gt; pages have been modified while in memory and must be written to disk when designated to be swapped out</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>&lt;em&gt;brutes&lt;/em&gt; les pàgines s'han modificat en memòria i s'han d'escriure al disc quan s'assenyalen per a ser intercanviades</seg>
       </tuv>
     </tu>
     <tu>

@@ -141,6 +141,37 @@ msgstr "Selecció"
 msgid "Open a new Manuals window"
 msgstr "Obre una nova del Manuals"
 
+msgid "squared plus"
+msgstr "més enquadrat"
+
+msgid "Failed to add to uninstall for addon ‘%s’: %s"
+msgstr "No s'ha pogut afegir al complement «%s»: %s"
+
+msgid "The screen locks itself too quickly"
+msgstr "La pantalla es tanca massa ràpidament"
+
+msgid ""
+"<em>dirty</em> pages have been modified while in memory and must be written "
+"to disk when designated to be swapped out"
+msgstr ""
+"<em>brutes</em> les pàgines s'han modificat en memòria i s'han d'escriure al"
+" disc quan s'assenyalen per a ser intercanviades"
+
+msgid ""
+"Refer to the \"Security\" section for information about security concerns "
+"when using XDMCP."
+msgstr ""
+"Consulteu la secció «Seguretat» per a obtenir més informació sobre les notes"
+" de seguretat quan s'utilitza l'XDMCP."
+
+msgid ""
+"Holding the middle mouse button, dragging left, and then releasing the "
+"middle mouse button will navigate backward."
+msgstr ""
+"Si manteniu premut el botó central del ratolí, l'arrossegueu cap a "
+"l'esquerra i a continuació deixeu anar el botó central, navegareu cap a la "
+"pàgina anterior."
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -893,9 +924,6 @@ msgstr "Inclou %s, %s i %s."
 msgid "Device Firmware"
 msgstr "Microprogramari del dispositiu"
 
-msgid "Failed to add to uninstall for addon ‘%s’: %s"
-msgstr "No s'ha pogut afegir al complement «%s»: %s"
-
 msgid "GNOME System Monitor"
 msgstr "Monitor del sistema del GNOME"
 
@@ -1614,9 +1642,6 @@ msgstr "unió"
 msgid "less than or equal to"
 msgstr "més petit o igual a"
 
-msgid "squared plus"
-msgstr "més enquadrat"
-
 msgid "equal to or less than"
 msgstr "igual o més petit que"
 
@@ -2018,14 +2043,6 @@ msgid "How do I enable or disable storing passwords?"
 msgstr "Com podeu activar o desactivar l'emmagatzematge de contrasenyes?"
 
 msgid ""
-"Holding the middle mouse button, dragging left, and then releasing the "
-"middle mouse button will navigate backward."
-msgstr ""
-"Si manteniu premut el botó central del ratolí, l'arrossegueu cap a "
-"l'esquerra i a continuació deixeu anar el botó central, navegareu cap a la "
-"pàgina anterior."
-
-msgid ""
 "You can use a proxy server for browsing the web. To use a web proxy when "
 "browsing, you need to <link href=\"help:gnome-help/net-proxy\">set it up in "
 "the GNOME <gui>Network</gui> settings panel</link>."
@@ -2284,13 +2301,6 @@ msgstr ""
 " a la llista. Això significa que un usuari amb un nom d'usuari llarg només "
 "haurà d'introduir els primers caràcters del nom d'usuari abans que l'element"
 " correcte de la llista estigui seleccionat."
-
-msgid ""
-"Refer to the \"Security\" section for information about security concerns "
-"when using XDMCP."
-msgstr ""
-"Consulteu la secció «Seguretat» per a obtenir més informació sobre les notes"
-" de seguretat quan s'utilitza l'XDMCP."
 
 msgid ""
 "You should not, under any circumstances, configure the GDM user/group to a "
@@ -3882,9 +3892,6 @@ msgstr ""
 "Sota <gui>Formats comuns</gui>, seleccioneu la regió i la llengua més "
 "propera als formats que voleu utilitzar."
 
-msgid "The screen locks itself too quickly"
-msgstr "La pantalla es tanca massa ràpidament"
-
 msgid ""
 "Make sure that <link xref=\"bluetooth-turn-on-off\"><gui>Bluetooth</gui> is "
 "switched on</link>."
@@ -4317,13 +4324,6 @@ msgstr ""
 
 msgid "<gui>s</gui>"
 msgstr "<gui>s</gui>"
-
-msgid ""
-"<em>dirty</em> pages have been modified while in memory and must be written "
-"to disk when designated to be swapped out"
-msgstr ""
-"<em>brutes</em> les pàgines s'han modificat en memòria i s'han d'escriure al"
-" disc quan s'assenyalen per a ser intercanviades"
 
 msgid "To check which processes are using the most memory:"
 msgstr "Per a comprovar quins processos estan utilitzant més memòria:"
