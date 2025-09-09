@@ -6,3 +6,11 @@ eval-gemma3:
 		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
 	done
 
+
+gpt-oss_prompts := 1
+eval-gpt-oss:
+	@for p in $(gpt-oss_prompts); do \
+		python evaluator/evaluator.py --max 200 --prompt_version $$p; \
+		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
+	done
+

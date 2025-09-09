@@ -39,6 +39,20 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             top_p=1.0,
             verbose=False,
         )
+    if model_type == "gpt-oss":
+        return ChatLlamaCpp(
+            temperature=temperature,
+            model_path=model_path,
+            n_ctx=2048,
+            n_gpu_layers=8,
+            n_batch=64,
+            max_tokens=128,
+            n_threads=max(1, multiprocessing.cpu_count()),
+            repeat_penalty=1.1,
+            top_p=1.0,
+            verbose=False,
+        )
+        
     elif model_type == "gpt":
         return ChatOpenAI(
             temperature=temperature,
@@ -65,19 +79,17 @@ def get_args():
     parser.add_argument(
         "--model_type",
         type=str,
-        choices=["gemma3", "gpt", "gemini"],
+        choices=["gemma3", "gpt", "gemini", "gpt-oss"],
         default="gemma3",
         help="Which backend to use",
     )
-    parser.add_argument(
-        "--model_path",
-        type=str,
-        default="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-27b-it-Q8_0.gguf",
-        help="Path for local Llama models (ignored for GPT/Gemini)",
-    )
+#    parser.add_argument(
+#        "--model_path",
+#        type=str,
+#        default="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf",
+#        help="Path for local Llama models (ignored for GPT/Gemini)",
+#    )
     return parser.parse_args()
-
-
 # -------------------------
 # Prompt & Metadata
 # -------------------------
@@ -174,7 +186,12 @@ def calc_metrics(tp, fp, fn, elapsed, processed):
 if __name__ == "__main__":
     args = get_args()
 
-    llm = load_llm(args.model_type, args.model_path)
+    if args.model_type == "gemma3":
+        path ="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf"       
+    else:
+        path ="/home/jordi/sc/llama/llama.cpp/download/gpt-oss-20b-UD-Q8_K_XL.gguf"
+ 
+    llm = load_llm(args.model_type, path)
     prompt, metadata = load_prompt(args.model_type, args.prompt_version), load_metadata(
         args.model_type, args.prompt_version
     )
