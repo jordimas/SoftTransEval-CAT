@@ -7,7 +7,7 @@ eval-gemma3:
 	done
 
 
-gpt-oss_prompts := 1
+gpt-oss_prompts := 1 2 2_1 2_2 3 3_1 3_2 4 5
 eval-gpt-oss:
 	@for p in $(gpt-oss_prompts); do \
 		python evaluator/evaluator.py --max 200 --prompt_version $$p; \
