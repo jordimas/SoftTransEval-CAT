@@ -397,6 +397,16 @@
      <note>'mil·lisegons.' should be 'en mil·lisegons.'</note>
     </tu>
 
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Additional source to include in the bundle</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Font a addicional a incloure al paquet</seg>
+      </tuv>
+     <note>'a addicional' should be 'addicional'</note>
+    </tu>
+
   </body>
 </tmx>
 

@@ -193,6 +193,9 @@ msgstr "Afegir un MIME personalitzat per a usuaris individuals"
 msgid "Delay between repeats in milliseconds."
 msgstr "Retard entre repeticions mil·lisegons."
 
+msgid "Additional source to include in the bundle"
+msgstr "Font a addicional a incloure al paquet"
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -4815,6 +4818,3 @@ msgstr ""
 "Per a canviar a un altre vídeo, premeu el botó de <gui "
 "style=\"button\">Fletxa enrere</gui> a la part superior esquerra de la "
 "pantalla."
-
-msgid "You can navigate while watching the movie:"
-msgstr "Podeu navegar mentre mireu la pel·lícula:"

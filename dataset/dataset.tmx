@@ -397,6 +397,16 @@
      <note>'mil·lisegons.' should be 'en mil·lisegons.'</note>
     </tu>
 
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Additional source to include in the bundle</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>Font a addicional a incloure al paquet</seg>
+      </tuv>
+     <note>'a addicional' should be 'addicional'</note>
+    </tu>
+
   <tu>
       <tuv xml:lang="en">
         <seg>Audio Player</seg>
@@ -8128,14 +8138,6 @@ XSession=gnome-classic</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Per a canviar a un altre vídeo, premeu el botó de &lt;gui style="button"&gt;Fletxa enrere&lt;/gui&gt; a la part superior esquerra de la pantalla.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>You can navigate while watching the movie:</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Podeu navegar mentre mireu la pel·lícula:</seg>
       </tuv>
     </tu>
     </body>
