@@ -4,6 +4,7 @@ import yaml
 import argparse
 import logging
 import save_json
+import re
 
 # LangChain models
 from langchain_community.chat_models import ChatLlamaCpp
@@ -74,7 +75,7 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             n_ctx=2048,
             n_gpu_layers=8,
             n_batch=64,
-            max_tokens=128,
+            max_tokens=2048,
             n_threads=max(1, multiprocessing.cpu_count()),
             repeat_penalty=1.1,
             top_p=1.0,
@@ -137,9 +138,10 @@ def load_metadata(model: str, prompt_version: str):
 def translate(llm, prompt: str, english: str, catalan: str) -> str:
     english = english.replace("_", "")
     catalan = catalan.replace("_", "")
+    text_to_review = f"English: '''{english}'''\nCatalan: '''{catalan}'''"
     messages = [
         SystemMessage(content=prompt),
-        HumanMessage(content=f"English: '''{english}'''\nCatalan: '''{catalan}'''"),
+        HumanMessage(content=text_to_review),
     ]
     ai_msg = llm.invoke(messages)
     answer = (ai_msg.content or "").strip()
@@ -251,20 +253,29 @@ if __name__ == "__main__":
                     f"Precision: {precision:.2f}, Recall: {recall:.2f}, F1 {f1:.2f}"
                 )
 
+            remove_thinking = re.sub(r"<think>.*?</think>", "", res, flags=re.DOTALL)
+            full_answer = res
+            if res != remove_thinking:
+                print(f"Removed thinking: ### {res} ###")
+                res = remove_thinking.strip()
+
             if res.upper().startswith("NO"):
                 if note:
                     fn += 1
-                    _write(en, ca, note, res, file, "fn")
+                    _write(en, ca, note, full_answer, file, "fn")
                 else:
                     tn += 1
                 continue
 
+            if not res.upper().startswith("YES"):
+                print("Answer '{res}' is not 'YES' or 'NO'")
+
             if note:
                 tp += 1
-                _write(en, ca, note, res, file, "tp")
+                _write(en, ca, note, full_answer, file, "tp")
             else:
                 fp += 1
-                _write(en, ca, note, res, file, "fp")
+                _write(en, ca, note, full_answer, file, "fp")
 
     total_time = time.time() - start_time
     prompt_version = args.prompt_version
