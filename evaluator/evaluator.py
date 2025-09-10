@@ -83,12 +83,6 @@ def get_args():
         default="gemma3",
         help="Which backend to use",
     )
-#    parser.add_argument(
-#        "--model_path",
-#        type=str,
-#        default="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf",
-#        help="Path for local Llama models (ignored for GPT/Gemini)",
-#    )
     return parser.parse_args()
 # -------------------------
 # Prompt & Metadata
