@@ -104,7 +104,7 @@ def get_args():
     parser.add_argument(
         "--model_type",
         type=str,
-        choices=["gemma3", "gpt", "gemini", "gpt-oss", "mistral", "Qwen3"],
+        choices=["gemma3", "gpt", "gemini", "gpt-oss", "mistral", "qwen3"],
         default="gemma3",
         help="Which backend to use",
     )
@@ -214,7 +214,7 @@ if __name__ == "__main__":
     elif args.model_type == "mistral":
         path = "/home/jordi/sc/llama/llama.cpp/download/Mistral-Small-24B-Instruct-2501.Q8_0.gguf"
     elif args.model_type == "qwen3":
-        path = "/home/jordi/sc/llama/llama.cpp/download/"
+        path = "/home/jordi/sc/llama/llama.cpp/download/Qwen3-30B-A3B-Q8_0.gguf"
     else:
         raise "Unknown model"
 

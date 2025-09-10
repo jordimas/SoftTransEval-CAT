@@ -21,3 +21,10 @@ eval-mistral:
 		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
 	done
 
+qwen3_prompts := 1 2 2_1 2_2 3 3_1 3_2 4 5
+eval-qwen3:
+	@for p in $(gpt-oss_prompts); do \
+		python evaluator/evaluator.py --model qwen3 --max 200 --prompt_version $$p; \
+		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
+	done
+
