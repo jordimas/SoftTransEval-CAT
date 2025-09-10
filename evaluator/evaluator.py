@@ -53,6 +53,20 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             verbose=False,
         )
 
+    if model_type == "mistral":
+        return ChatLlamaCpp(
+            temperature=temperature,
+            model_path=model_path,
+            n_ctx=2048,
+            n_gpu_layers=8,
+            n_batch=64,
+            max_tokens=128,
+            n_threads=max(1, multiprocessing.cpu_count()),
+            repeat_penalty=1.1,
+            top_p=1.0,
+            verbose=False,
+        )
+
     elif model_type == "gpt":
         return ChatOpenAI(
             temperature=temperature,
