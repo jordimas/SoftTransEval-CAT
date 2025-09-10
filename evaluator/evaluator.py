@@ -268,7 +268,7 @@ if __name__ == "__main__":
                 continue
 
             if not res.upper().startswith("YES"):
-                print("Answer '{res}' is not 'YES' or 'NO'")
+                full_answer = f"Answer is not 'YES' or 'NO'\n" + full_answer
 
             if note:
                 tp += 1
