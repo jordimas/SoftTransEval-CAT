@@ -52,7 +52,7 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             top_p=1.0,
             verbose=False,
         )
-        
+
     elif model_type == "gpt":
         return ChatOpenAI(
             temperature=temperature,
@@ -81,6 +81,8 @@ def get_args():
         help="Which backend to use",
     )
     return parser.parse_args()
+
+
 # -------------------------
 # Prompt & Metadata
 # -------------------------
@@ -178,14 +180,14 @@ if __name__ == "__main__":
     args = get_args()
 
     if args.model_type == "gemma3":
-        path ="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf"       
+        path = "/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf"
     elif args.model_type == "gpt-oss":
-        path ="/home/jordi/sc/llama/llama.cpp/download/gpt-oss-20b-UD-Q8_K_XL.gguf"
+        path = "/home/jordi/sc/llama/llama.cpp/download/gpt-oss-20b-UD-Q8_K_XL.gguf"
     elif args.model_type == "mistral":
-        path ="/home/jordi/sc/llama/llama.cpp/download/Mistral-Small-24B-Instruct-2501.Q8_0.gguf"
-    else
+        path = "/home/jordi/sc/llama/llama.cpp/download/Mistral-Small-24B-Instruct-2501.Q8_0.gguf"
+    else:
         raise "Unknown model"
- 
+
     llm = load_llm(args.model_type, path)
     prompt, metadata = load_prompt(args.model_type, args.prompt_version), load_metadata(
         args.model_type, args.prompt_version
