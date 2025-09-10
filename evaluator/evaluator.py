@@ -69,9 +69,6 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
         raise ValueError(f"Unsupported model_type: {model_type}")
 
 
-# -------------------------
-# CLI Arguments
-# -------------------------
 def get_args():
     parser = argparse.ArgumentParser(description="Run translation reviewer.")
     parser.add_argument("--prompt_version", type=str, default="2_1")
@@ -79,7 +76,7 @@ def get_args():
     parser.add_argument(
         "--model_type",
         type=str,
-        choices=["gemma3", "gpt", "gemini", "gpt-oss"],
+        choices=["gemma3", "gpt", "gemini", "gpt-oss", "mistral"],
         default="gemma3",
         help="Which backend to use",
     )
@@ -182,8 +179,12 @@ if __name__ == "__main__":
 
     if args.model_type == "gemma3":
         path ="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf"       
-    else:
+    elif args.model_type == "gpt-oss":
         path ="/home/jordi/sc/llama/llama.cpp/download/gpt-oss-20b-UD-Q8_K_XL.gguf"
+    elif args.model_type == "mistral":
+        path ="/home/jordi/sc/llama/llama.cpp/download/Mistral-Small-24B-Instruct-2501.Q8_0.gguf"
+    else
+        raise "Unknown model"
  
     llm = load_llm(args.model_type, path)
     prompt, metadata = load_prompt(args.model_type, args.prompt_version), load_metadata(
