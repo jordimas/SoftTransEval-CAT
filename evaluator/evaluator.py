@@ -67,6 +67,20 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             verbose=False,
         )
 
+    if model_type == "qwen3":
+        return ChatLlamaCpp(
+            temperature=temperature,
+            model_path=model_path,
+            n_ctx=2048,
+            n_gpu_layers=8,
+            n_batch=64,
+            max_tokens=128,
+            n_threads=max(1, multiprocessing.cpu_count()),
+            repeat_penalty=1.1,
+            top_p=1.0,
+            verbose=False,
+        )
+
     elif model_type == "gpt":
         return ChatOpenAI(
             temperature=temperature,
@@ -90,7 +104,7 @@ def get_args():
     parser.add_argument(
         "--model_type",
         type=str,
-        choices=["gemma3", "gpt", "gemini", "gpt-oss", "mistral"],
+        choices=["gemma3", "gpt", "gemini", "gpt-oss", "mistral", "Qwen3"],
         default="gemma3",
         help="Which backend to use",
     )
@@ -199,6 +213,8 @@ if __name__ == "__main__":
         path = "/home/jordi/sc/llama/llama.cpp/download/gpt-oss-20b-UD-Q8_K_XL.gguf"
     elif args.model_type == "mistral":
         path = "/home/jordi/sc/llama/llama.cpp/download/Mistral-Small-24B-Instruct-2501.Q8_0.gguf"
+    elif args.model_type == "qwen3":
+        path = "/home/jordi/sc/llama/llama.cpp/download/"
     else:
         raise "Unknown model"
 
