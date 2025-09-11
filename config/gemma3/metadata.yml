@@ -1,4 +1,21 @@
 versions:
   1:
     goal: "This is the baseline"
+  2:
+    goal: "Pure instructions prompt"
+  2_1:
+    goal: "Pure instructions prompt v2.1"
+  2_2:
+    goal: "Pure instructions prompt v2.2"
+  3:
+    goal: "Prompt with samples"
+  3_1:
+    goal: "Prompt with samples v3.1"
+  3_2:
+    goal: "Prompt with samples v3.2"
+  4:
+    goal: "Super simple prompt"
+  5:    
+    goal: "Categorization prompt"
+     
 
