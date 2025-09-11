@@ -75,7 +75,7 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             n_ctx=2048,
             n_gpu_layers=8,
             n_batch=64,
-            max_tokens=2048,
+            max_tokens=4096,
             n_threads=max(1, multiprocessing.cpu_count()),
             repeat_penalty=1.1,
             top_p=1.0,
