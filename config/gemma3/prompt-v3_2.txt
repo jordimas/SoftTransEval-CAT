@@ -71,17 +71,17 @@ Explanation: The translation is about adjusting screen brightness, not uploading
 **Example 3: Non-Critical Error (Awkward Phrasing)**
 - Source: *Whether the menu is a parent.*
 - Target: *Si el menú és un pare.*
-- Output: `NO`
+- Output: NO
 
 **Example 4: Non-Critical Error (Minor Terminology Difference)**
 - Source: *System supports accent colors.*
 - Target: *El sistema admet colors de contrast.*
-- Output: `NO`
+- Output: NO
 
 **Example 5: Non-Critical Error (Synonyms)**
 - Source: *Click the "Submit" button to continue.*
 - Target: *Premi el botó "Envia" per a continuar.*
-- Output: `NO`
+- Output: NO
 
 ---
 
