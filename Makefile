@@ -1,4 +1,4 @@
-gemma_prompts := 1 2 2_1 2_2 3 3_1 3_2 4 5
+gemma_prompts := 1 
 
 eval-gemma3:
 	@for p in $(gemma_prompts); do \

@@ -70,14 +70,14 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
 
     if model_type == "qwen3":
         return ChatLlamaCpp(
-            temperature=temperature,
+            temperature=0.7,
             model_path=model_path,
             n_ctx=2048,
             n_gpu_layers=8,
             n_batch=64,
-            max_tokens=4096,
+            max_tokens=8192,
             n_threads=max(1, multiprocessing.cpu_count()),
-            repeat_penalty=1.1,
+            repeat_penalty=1.2,
             top_p=1.0,
             verbose=False,
         )
