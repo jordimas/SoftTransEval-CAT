@@ -36,21 +36,12 @@ You must **explicitly ignore** the following types of issues, as they are not co
 
 ## OUTPUT FORMAT
 
-- If you find a critical error:
-```
+- If you find a critical error: YES
 
-YES.
 Error Type: [Complete Contradiction or Topic Mismatch]
 Explanation: [One-sentence explanation of the error.]
 
-```
-
-- If you find no critical errors, based on the definitions above:
-```
-
-NO
-
-```
+- If you find no critical errors, based on the definitions above: NO
 
 ---
 
@@ -60,25 +51,22 @@ NO
 - Source: *Enable automatic file saving.*
 - Target: *Desactiva el desament automàtic de fitxers.*
 - Output:
-```
-
 YES.
 Error Type: Complete Contradiction
 Explanation: The translation says "Disable" instead of "Enable."
 
-```
+
 
 **Example 2: Critical Error (Topic Mismatch)**
 - Source: *Upload your profile picture.*
 - Target: *Ajusta la brillantor de la pantalla.*
 - Output:
-```
+
 
 YES.
 Error Type: Topic Mismatch
 Explanation: The translation is about adjusting screen brightness, not uploading a picture.
 
-```
 
 **Example 3: Non-Critical Error (Awkward Phrasing)**
 - Source: *Whether the menu is a parent.*
@@ -102,4 +90,4 @@ Explanation: The translation is about adjusting screen brightness, not uploading
 **Source**: {English text here}
 **Target**: {Catalan text here}
 
-```
+

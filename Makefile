@@ -1,4 +1,4 @@
-gemma_prompts := 1 
+gemma_prompts := 3_2
 
 eval-gemma3:
 	@for p in $(gemma_prompts); do \
@@ -12,6 +12,11 @@ eval-gemma3-400:
 		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
 	done
 
+eval-gemma3-600:
+	@for p in $(gemma_prompts); do \
+		python evaluator/evaluator.py --max 600 --prompt_version $$p; \
+		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
+	done
 
 gpt-oss_prompts := 1 2 2_1 2_2 3 3_1 3_2 4 5
 eval-gpt-oss:
