@@ -44,8 +44,7 @@ def get_args():
     parser = argparse.ArgumentParser(
         description="Run translation inference with Gemma 3."
     )
-    parser.add_argument("--prompt_version", type=str, default="2_1")
-    parser.add_argument("--max", type=int, default=200)
+    parser.add_argument("--prompt_version", type=str, default="1")
     parser.add_argument(
         "--model_path",
         default="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf",
@@ -112,6 +111,18 @@ def load_strings(dataset: str, max_entries=-1):
     return strings
 
 
+def calc_metrics(tp, fp, fn, elapsed, processed):
+    precision = tp / (tp + fp) if (tp + fp) else 0
+    recall = tp / (tp + fn) if (tp + fn) else 0
+    sets_per_min = (processed / elapsed * 60) if elapsed else 0
+
+    if (precision + recall) > 0:
+        f1 = 2 * (precision * recall) / (precision + recall)
+    else:
+        f1 = 0.0
+    return precision, recall, sets_per_min, f1
+
+
 # -------------------------
 # Main
 # -------------------------
@@ -123,30 +134,58 @@ if __name__ == "__main__":
         args.prompt_version
     )
 
-    strings = load_strings(args.dataset, args.max)
+    strings = load_strings(args.input)
 
     start_time = time.time()
-    output = strings.replace(".po", ".txt")
+    output = args.input.replace(".po", ".txt")
+    tp = fp = fn = tn = processed = 0
+    start_time = time.time()
+    total_strings = min(len(strings))
+
     with open(
-        strings,
+        output,
         "w",
         encoding="utf-8",
     ) as file:
         for idx, (en, ca, note) in enumerate(strings, start=1):
             res = translate(llm, prompt, en, ca)
+            processed += 1
 
-            lines = [
-                f"English: {en}",
-                f"Catalan: {ca}",
-            ]
+            if idx % 10 == 0:
+                elapsed = time.time() - start_time
+                precision, recall, spm, f1 = calc_metrics(
+                    tp, fp, fn, elapsed, processed
+                )
+                print(
+                    f"Progress: {(idx/total_strings)*100:.2f}% - {idx}/{total_strings} | "
+                    f"set/min: {spm:.2f} | Time: {elapsed:.2f}s | "
+                    f"TP: {tp}, TN: {tn}, FP: {fp}, FN: {fn} | "
+                    f"Precision: {precision:.2f}, Recall: {recall:.2f}, F1 {f1:.2f}"
+                )
+
+            remove_thinking = re.sub(r"<think>.*?</think>", "", res, flags=re.DOTALL)
+            full_answer = res
+            if res != remove_thinking:
+                print(f"Removed thinking: ### {res} ###")
+                res = remove_thinking.strip()
+
+            if res.upper().startswith("NO"):
+                if note:
+                    fn += 1
+                    _write(en, ca, note, full_answer, file, "fn")
+                else:
+                    tn += 1
+                continue
+
+            if not res.upper().startswith("YES"):
+                full_answer = f"Answer is not 'YES' or 'NO'\n" + full_answer
+
             if note:
-                lines.append(f"Note: {note}")
-            lines.append(f"Result: {res}")
-            lines.append("\n-----------------------\n")
-
-            content = "\n".join(lines)
-            file.write(content + "\n")
-            print(content)
+                tp += 1
+                _write(en, ca, note, full_answer, file, "tp")
+            else:
+                fp += 1
+                _write(en, ca, note, full_answer, file, "fp")
 
     total_time = time.time() - start_time
     print(f"Total time used: {total_time:.2f} seconds")
