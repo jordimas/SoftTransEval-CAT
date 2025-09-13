@@ -50,13 +50,13 @@ def get_args():
         "--model_path",
         default="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf",
         type=str,
-        required=True,
         help="Path to Gemma 3 model file (.gguf)",
     )
     parser.add_argument(
-        "--dataset",
+        "--input",
         type=str,
-        help="PO dataset file",
+        required=True,
+        help="PO input file",
     )
     return parser.parse_args()
 
