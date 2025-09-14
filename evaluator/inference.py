@@ -26,7 +26,7 @@ def load_llm(model_path: str, temperature: float = 0):
     return ChatLlamaCpp(
         temperature=temperature,
         model_path=model_path,
-        n_ctx=2048,
+        n_ctx=4096,
         n_gpu_layers=8,
         n_batch=64,
         max_tokens=512,
@@ -110,7 +110,7 @@ def load_strings(dataset: str, max_entries=-1):
     print(f"Loaded {len(strings)} strings from {dataset}")
     return strings
 
-def _write(english: str, catalan: str, note: str, result: str, fh, status: str):
+def _write(english: str, catalan: str, note: str, result: str, fh):
     lines = [
         f"English: {english}",
         f"Catalan: {catalan}",
@@ -118,7 +118,6 @@ def _write(english: str, catalan: str, note: str, result: str, fh, status: str):
     if note:
         lines.append(f"Note: {note}")
     lines.append(f"Result: {result}")
-    lines.append(f"Status: {status}")
     lines.append("\n-----------------------\n")
     content = "\n".join(lines)
     fh.write(content + "\n")
@@ -162,7 +161,7 @@ if __name__ == "__main__":
             if res.upper().startswith("NO"):
                 continue
 
-            _write(en, ca, note, res, file, "")
+            _write(en, ca, note, res, file)
 
     total_time = time.time() - start_time
     print(f"Total time used: {total_time:.2f} seconds")
