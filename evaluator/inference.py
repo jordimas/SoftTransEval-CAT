@@ -158,7 +158,7 @@ if __name__ == "__main__":
                     f"Progress: {(idx/total_strings)*100:.2f}% - {idx}/{total_strings} | Time: {elapsed:.2f}s"
                 )
 
-            if res.upper().startswith("NO"):
+            if not res.upper().startswith("YES"):
                 continue
 
             _write(en, ca, note, res, file)
