@@ -47,7 +47,7 @@ def get_args():
     parser.add_argument("--prompt_version", type=str, default="1")
     parser.add_argument(
         "--model_path",
-        default="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-12b-it-Q8_0.gguf",
+        default="/home/jordi/sc/llama/llama.cpp/download/google_gemma-3-27b-it-Q8_0.gguf",
         type=str,
         help="Path to Gemma 3 model file (.gguf)",
     )
