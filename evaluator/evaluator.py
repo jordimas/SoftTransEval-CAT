@@ -139,8 +139,7 @@ def get_args():
 def load_prompt(model: str, prompt_version: str):
     if model in ["gemini-25-pro", "gemini-25-flash"]:
         model = "gemini"
-
-    if model in ["gpt-5", "gpt-5-mini"]:
+    elif model in ["gpt-5", "gpt-5-mini"]:
         model = "gpt"
 
     with open(f"config/{model}/prompt-v{prompt_version}.txt", "r") as file:
@@ -246,7 +245,7 @@ if __name__ == "__main__":
         path = "/home/jordi/sc/llama/llama.cpp/download/Qwen3-30B-A3B-Q8_0.gguf"
     else:
         if args.model_type not in ["gpt-5-mini", "gpt-5", "gemini-25-flash", "gemini-25-pro"]:
-            raise "Unknown model"
+            raise ValueError("Unknown model")
         else:
             path = None
 
