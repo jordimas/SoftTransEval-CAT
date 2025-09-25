@@ -85,8 +85,8 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
     elif model_type == "gpt":
         return ChatOpenAI(
             temperature=temperature,
-            model="gpt-5",
-            max_tokens=128,
+            model="gpt-5-2025-08-07",
+            max_tokens=4096,
         )
     elif model_type == "gemini":
         return ChatGoogleGenerativeAI(
