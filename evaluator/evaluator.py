@@ -85,12 +85,12 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
     elif model_type == "gpt":
         return ChatOpenAI(
             temperature=temperature,
-            model="gpt-4o-mini",  # parametrize if needed
+            model="gpt-5",
             max_tokens=128,
         )
     elif model_type == "gemini":
         return ChatGoogleGenerativeAI(
-            model="gemini-1.5-flash",
+            model="gemini-2.5-flash",
             temperature=temperature,
             max_output_tokens=128,
         )
@@ -218,7 +218,10 @@ if __name__ == "__main__":
     elif args.model_type == "qwen3":
         path = "/home/jordi/sc/llama/llama.cpp/download/Qwen3-30B-A3B-Q8_0.gguf"
     else:
-        raise "Unknown model"
+        if args.model_type not in ["gpt", "gemini"]:
+            raise "Unknown model"
+        else:
+            path = None
 
     llm = load_llm(args.model_type, path)
     prompt, metadata = load_prompt(args.model_type, args.prompt_version), load_metadata(

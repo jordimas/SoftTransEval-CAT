@@ -110,6 +110,7 @@ def load_strings(dataset: str, max_entries=-1):
     print(f"Loaded {len(strings)} strings from {dataset}")
     return strings
 
+
 def _write(english: str, catalan: str, note: str, result: str, fh):
     lines = [
         f"English: {english}",
