@@ -3,7 +3,6 @@ import time
 import yaml
 import argparse
 import logging
-import re
 import polib
 
 # LangChain Gemma model
@@ -71,7 +70,7 @@ def load_prompt(prompt_version: str):
 def load_metadata(prompt_version: str):
     try:
         prompt_version = int(prompt_version.replace("_", ""))
-        with open(f"config/gemma3/metadata.yml", "r") as fh:
+        with open("config/gemma3/metadata.yml", "r") as fh:
             data = yaml.safe_load(fh)
             return data["versions"][prompt_version]["goal"]
     except Exception as e:
