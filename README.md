@@ -45,4 +45,4 @@ Legend:
 - fn: false negative
 - tn: true negative
 
-If you are not familiar with these concepts, check [Confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix)
+If you are not familiar with these concepts, check the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) at Wikipedia.
