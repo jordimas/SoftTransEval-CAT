@@ -407,6 +407,36 @@
      <note>'a addicional' should be 'addicional'</note>
     </tu>
 
+    <tu>
+      <tuv xml:lang="en">
+        <seg>List all tags</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Llista totes les estiquetes</seg>
+      </tuv>
+     <note>'estiquetes' should be 'etiquetes'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Spreadsheets</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Full de càlcul</seg>
+      </tuv>
+     <note>'càlcul' should be 'càlculs'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>%s Used</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>%s no usat</seg>
+      </tuv>
+     <note>'no usat' should be 'usat'</note>
+    </tu>
+    
   </body>
 </tmx>
 

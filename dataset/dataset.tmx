@@ -407,6 +407,36 @@
      <note>'a addicional' should be 'addicional'</note>
     </tu>
 
+    <tu>
+      <tuv xml:lang="en">
+        <seg>List all tags</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Llista totes les estiquetes</seg>
+      </tuv>
+     <note>'estiquetes' should be 'etiquetes'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Spreadsheets</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Full de càlcul</seg>
+      </tuv>
+     <note>'càlcul' should be 'càlculs'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>%s Used</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>%s no usat</seg>
+      </tuv>
+     <note>'no usat' should be 'usat'</note>
+    </tu>
+    
   <tu>
       <tuv xml:lang="en">
         <seg>Audio Player</seg>
@@ -8114,30 +8144,6 @@ XSession=gnome-classic</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Bloquejar els paràmetres</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Channels.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Canals.</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Videos</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Vídeos</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>To change to another video, press the &lt;gui style="button"&gt;Arrow back&lt;/gui&gt; button in the upper left corner.</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Per a canviar a un altre vídeo, premeu el botó de &lt;gui style="button"&gt;Fletxa enrere&lt;/gui&gt; a la part superior esquerra de la pantalla.</seg>
       </tuv>
     </tu>
     </body>

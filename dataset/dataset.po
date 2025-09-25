@@ -196,6 +196,15 @@ msgstr "Retard entre repeticions mil·lisegons."
 msgid "Additional source to include in the bundle"
 msgstr "Font a addicional a incloure al paquet"
 
+msgid "List all tags"
+msgstr "Llista totes les estiquetes"
+
+msgid "Spreadsheets"
+msgstr "Full de càlcul"
+
+msgid "%s Used"
+msgstr "%s no usat"
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -4804,17 +4813,3 @@ msgstr ""
 
 msgid "Lock down settings"
 msgstr "Bloquejar els paràmetres"
-
-msgid "Channels."
-msgstr "Canals."
-
-msgid "Videos"
-msgstr "Vídeos"
-
-msgid ""
-"To change to another video, press the <gui style=\"button\">Arrow back</gui>"
-" button in the upper left corner."
-msgstr ""
-"Per a canviar a un altre vídeo, premeu el botó de <gui "
-"style=\"button\">Fletxa enrere</gui> a la part superior esquerra de la "
-"pantalla."
