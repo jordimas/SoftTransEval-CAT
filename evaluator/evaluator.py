@@ -245,7 +245,7 @@ if __name__ == "__main__":
     elif args.model_type == "qwen3":
         path = "/home/jordi/sc/llama/llama.cpp/download/Qwen3-30B-A3B-Q8_0.gguf"
     else:
-        if args.model_type not in ["gpt-5-mini", "gpt-5", "gemini25-flash", "gemini25-pro"]:
+        if args.model_type not in ["gpt-5-mini", "gpt-5", "gemini-25-flash", "gemini-25-pro"]:
             raise "Unknown model"
         else:
             path = None
