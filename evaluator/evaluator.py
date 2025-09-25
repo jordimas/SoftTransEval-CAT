@@ -82,23 +82,29 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             verbose=False,
         )
 
-    elif model_type == "gpt":
+    elif model_type == "gpt-5":
         return ChatOpenAI(
             temperature=temperature,
-            model="gpt-5-2025-08-07",
+            model="gpt-5",
             max_tokens=4096,
         )
-    elif model_type == "gemini25-flash":
+    elif model_type == "gpt-5-mini":
+        return ChatOpenAI(
+            temperature=temperature,
+            model="gpt-5-mini",
+            max_tokens=4096,
+        )
+    elif model_type == "gemini-25-flash":
         return ChatGoogleGenerativeAI(
             model="gemini-2.5-flash",
             temperature=temperature,
-            max_output_tokens=128,
+            max_output_tokens=4096,
         )
-    elif model_type == "gemini25-pro":
+    elif model_type == "gemini-25-pro":
         return ChatGoogleGenerativeAI(
             model="gemini-2.5-pro",
             temperature=temperature,
-            max_output_tokens=128,
+            max_output_tokens=4096,
         )
     else:
         raise ValueError(f"Unsupported model_type: {model_type}")
@@ -113,9 +119,10 @@ def get_args():
         type=str,
         choices=[
             "gemma3",
-            "gpt",
-            "gemini25-flash",
-            "gemini25-pro",
+            "gpt-5",
+            "gpt-5-mini",
+            "gemini-25-flash",
+            "gemini-25-pro",
             "gpt-oss",
             "mistral",
             "qwen3",
@@ -130,8 +137,11 @@ def get_args():
 # Prompt & Metadata
 # -------------------------
 def load_prompt(model: str, prompt_version: str):
-    if model in ["gemini25-pro", "gemini25-flash"]:
+    if model in ["gemini-25-pro", "gemini-25-flash"]:
         model = "gemini"
+
+    if model in ["gpt-5", "gpt-5-mini"]:
+        model = "gpt"
 
     with open(f"config/{model}/prompt-v{prompt_version}.txt", "r") as file:
         return file.read()
@@ -235,7 +245,7 @@ if __name__ == "__main__":
     elif args.model_type == "qwen3":
         path = "/home/jordi/sc/llama/llama.cpp/download/Qwen3-30B-A3B-Q8_0.gguf"
     else:
-        if args.model_type not in ["gpt", "gemini25-flash", "gemini25-pro"]:
+        if args.model_type not in ["gpt-5-mini", "gpt-5", "gemini25-flash", "gemini25-pro"]:
             raise "Unknown model"
         else:
             path = None
