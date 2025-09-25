@@ -384,7 +384,7 @@
       <tuv xml:lang="ca">
         <seg>Afegir un MIME personalitzat per a usuaris individuals</seg>
       </tuv>
-     <note>'suggerggi' should be 'suggereixi'</note>
+     <note>'un MIME' should be 'un tipus MIME'</note>
     </tu>
 
     <tu>
