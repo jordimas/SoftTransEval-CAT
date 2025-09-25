@@ -88,9 +88,15 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             model="gpt-5-2025-08-07",
             max_tokens=4096,
         )
-    elif model_type == "gemini":
+    elif model_type == "gemini25-flash":
         return ChatGoogleGenerativeAI(
             model="gemini-2.5-flash",
+            temperature=temperature,
+            max_output_tokens=128,
+        )
+    elif model_type == "gemini25-pro":
+        return ChatGoogleGenerativeAI(
+            model="gemini-2.5-pro",
             temperature=temperature,
             max_output_tokens=128,
         )
@@ -105,7 +111,15 @@ def get_args():
     parser.add_argument(
         "--model_type",
         type=str,
-        choices=["gemma3", "gpt", "gemini", "gpt-oss", "mistral", "qwen3"],
+        choices=[
+            "gemma3",
+            "gpt",
+            "gemini25-flash",
+            "gemini25-pro",
+            "gpt-oss",
+            "mistral",
+            "qwen3",
+        ],
         default="gemma3",
         help="Which backend to use",
     )
@@ -116,6 +130,9 @@ def get_args():
 # Prompt & Metadata
 # -------------------------
 def load_prompt(model: str, prompt_version: str):
+    if model in ["gemini25-pro", "gemini25-flash"]:
+        model = "gemini"
+
     with open(f"config/{model}/prompt-v{prompt_version}.txt", "r") as file:
         return file.read()
 
@@ -218,7 +235,7 @@ if __name__ == "__main__":
     elif args.model_type == "qwen3":
         path = "/home/jordi/sc/llama/llama.cpp/download/Qwen3-30B-A3B-Q8_0.gguf"
     else:
-        if args.model_type not in ["gpt", "gemini"]:
+        if args.model_type not in ["gpt", "gemini25-flash", "gemini25-pro"]:
             raise "Unknown model"
         else:
             path = None
@@ -271,7 +288,7 @@ if __name__ == "__main__":
                 continue
 
             if not res.upper().startswith("YES"):
-                full_answer = "Answer is not 'YES' or 'NO'\n" + full_answer
+                full_answer = f"Answer is not 'YES' or 'NO'\n" + full_answer
 
             if note:
                 tp += 1
