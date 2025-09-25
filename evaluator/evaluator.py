@@ -94,13 +94,13 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
             model="gpt-5-mini",
             max_tokens=4096,
         )
-    elif model_type == "gemini-25-flash":
+    elif model_type == "gemini-2.5-flash":
         return ChatGoogleGenerativeAI(
             model="gemini-2.5-flash",
             temperature=temperature,
             max_output_tokens=4096,
         )
-    elif model_type == "gemini-25-pro":
+    elif model_type == "gemini-2.5-pro":
         return ChatGoogleGenerativeAI(
             model="gemini-2.5-pro",
             temperature=temperature,
@@ -121,8 +121,8 @@ def get_args():
             "gemma3",
             "gpt-5",
             "gpt-5-mini",
-            "gemini-25-flash",
-            "gemini-25-pro",
+            "gemini-2.5-flash",
+            "gemini-2.5-pro",
             "gpt-oss",
             "mistral",
             "qwen3",
@@ -137,7 +137,7 @@ def get_args():
 # Prompt & Metadata
 # -------------------------
 def load_prompt(model: str, prompt_version: str):
-    if model in ["gemini-25-pro", "gemini-25-flash"]:
+    if model in ["gemini-2.5-pro", "gemini-2.5-flash"]:
         model = "gemini"
     elif model in ["gpt-5", "gpt-5-mini"]:
         model = "gpt"
@@ -244,7 +244,7 @@ if __name__ == "__main__":
     elif args.model_type == "qwen3":
         path = "/home/jordi/sc/llama/llama.cpp/download/Qwen3-30B-A3B-Q8_0.gguf"
     else:
-        if args.model_type not in ["gpt-5-mini", "gpt-5", "gemini-25-flash", "gemini-25-pro"]:
+        if args.model_type not in ["gpt-5-mini", "gpt-5", "gemini-2.5-flash", "gemini-2.5-pro"]:
             raise ValueError("Unknown model")
         else:
             path = None

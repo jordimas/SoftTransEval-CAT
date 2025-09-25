@@ -28,4 +28,4 @@ eval-qwen3:
 		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
 	done
 	
-all: eval-gemma3 gpt-oss_prompts eval-mistral eval-mistral
+all: eval-gemma3 gpt-oss_prompts eval-mistral eval-qwen3
