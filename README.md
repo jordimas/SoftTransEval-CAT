@@ -12,14 +12,14 @@ This repository includes three main components:
 
 # Dataset
 
-Dataset is at [dataset/dataset.tmx](dataset/dataset.tmx) file.
+Dataset is located at [dataset/dataset.tmx](dataset/dataset.tmx) file.
 
 The dataset has the following characteristics:
 - English - Catalan only
 - Contains 1,000 translations from the GNOME UI and documentation projects
-- Includes 10% translation errors (it is imbalanced), which have been review and corrected by humans
+- Includes 10% translation errors (it is imbalanced), which have been reviewed and corrected by humans
 
-# Evaluation of differents prompts
+# Evaluation of different prompts
 
 Prompts are in [config/](config/) directory.
 
@@ -43,4 +43,6 @@ Legend:
 - tp: true positive
 - fp: false positive
 - fn: false negative
-- tn: true positive
+- tn: true negative
+
+If you are not familiar with these concepts, check [Confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix)
