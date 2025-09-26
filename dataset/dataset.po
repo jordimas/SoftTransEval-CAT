@@ -215,7 +215,10 @@ msgid "More than one extension bundle specified"
 msgstr "S'ha especificat més un paquet d'extensió"
 
 msgid "Changes Cannot be Applied"
-msgstr "No s'han aplicat els canvis\""
+msgstr "No s'han aplicat els canvis"
+
+msgid "Screencast failed to start"
+msgstr "No s'ha pogut iniciar la captura de pantalla"
 
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
@@ -4801,6 +4804,3 @@ msgstr "Processos típics"
 
 msgid "gnome-shell"
 msgstr "gnome-shell"
-
-msgid "various <app>GVFS</app> processes"
-msgstr "diversos processos <app>GVFS</app>"
