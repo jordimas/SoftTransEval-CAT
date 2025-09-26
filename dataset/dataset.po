@@ -220,6 +220,14 @@ msgstr "No s'han aplicat els canvis"
 msgid "Screencast failed to start"
 msgstr "No s'ha pogut iniciar la captura de pantalla"
 
+msgid "Screencast failed to start"
+msgstr "No s'ha pogut iniciar la captura de pantalla"
+
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Per començar, es necessita l'adreça de l'ordinador al que es vol connectar."
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -4801,6 +4809,3 @@ msgstr "Atenuar la pantalla quan l'usuari estigui inactiu"
 
 msgid "Typical processes"
 msgstr "Processos típics"
-
-msgid "gnome-shell"
-msgstr "gnome-shell"

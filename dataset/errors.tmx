@@ -466,7 +466,6 @@
       </tuv>
      <note>'més un' should be 'més d'un'</note>
     </tu>
-
     
     <tu>
       <tuv xml:lang="en">
@@ -488,6 +487,25 @@
      <note>'captura de pantalla' should be 'enregistrament de pantalla'</note>
     </tu>
 
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Screencast failed to start</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>No s'ha pogut iniciar la captura de pantalla</seg>
+      </tuv>
+     <note>'captura de pantalla' should be 'enregistrament de pantalla'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>To begin, you will need the address of the computer you want to connect to.</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Per començar, es necessita l'adreça de l'ordinador al que es vol connectar.</seg>
+      </tuv>
+     <note>'al que' should be 'al qual'</note>
+    </tu>
 
             
   </body>
