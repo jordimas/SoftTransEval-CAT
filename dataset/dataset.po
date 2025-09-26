@@ -228,6 +228,9 @@ msgid ""
 msgstr ""
 "Per començar, es necessita l'adreça de l'ordinador al que es vol connectar."
 
+msgid "Past Week"
+msgstr "Fa una setmana"
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -4806,6 +4809,3 @@ msgstr "Com preconfiguro VPN per a tots els meus usuaris?"
 
 msgid "Dim screen when user is idle"
 msgstr "Atenuar la pantalla quan l'usuari estigui inactiu"
-
-msgid "Typical processes"
-msgstr "Processos típics"

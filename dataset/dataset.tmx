@@ -506,6 +506,16 @@
       </tuv>
      <note>'al que' should be 'al qual'</note>
     </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Past Week</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Fa una setmana</seg>
+      </tuv>
+     <note>'Fa una setmana' should be 'Setmana passada'</note>
+    </tu>
 
             
   <tu>
@@ -8155,14 +8165,6 @@ Exec=&lt;var&gt;myapplication1&lt;/var&gt;</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>Atenuar la pantalla quan l'usuari estigui inactiu</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Typical processes</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Processos típics</seg>
       </tuv>
     </tu>
     </body>

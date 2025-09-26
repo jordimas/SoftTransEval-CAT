@@ -506,6 +506,16 @@
       </tuv>
      <note>'al que' should be 'al qual'</note>
     </tu>
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Past Week</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Fa una setmana</seg>
+      </tuv>
+     <note>'Fa una setmana' should be 'Setmana passada'</note>
+    </tu>
 
             
   </body>
