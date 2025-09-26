@@ -421,7 +421,7 @@
       <tuv xml:lang="en">
         <seg>Spreadsheets</seg>
       </tuv>
-      <tuv xml:lang="ca">
+      <tuv xml:lang="ca">nal source to include in the bundl
         <seg>Full de càlcul</seg>
       </tuv>
      <note>'càlcul' should be 'càlculs'</note>
@@ -436,7 +436,49 @@
       </tuv>
      <note>'no usat' should be 'usat'</note>
     </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>The certificate contains errors</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>El certificat conte errors</seg>
+      </tuv>
+     <note>'conte' should be 'conté'</note>
+    </tu>
+
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Screenshot finished</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>Descàrrega finalitzada</seg>
+      </tuv>
+     <note>'Descàrrega' should be 'Captura de pantalla'</note>
+    </tu>
     
+    <tu>
+      <tuv xml:lang="en">
+        <seg>More than one extension bundle specified</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>S'ha especificat més un paquet d'extensió</seg>
+      </tuv>
+     <note>'més un' should be 'més d'un'</note>
+    </tu>
+
+    
+    <tu>
+      <tuv xml:lang="en">
+        <seg>Changes Cannot be Applied</seg>
+      </tuv>
+      <tuv xml:lang="ca">
+        <seg>No s'han aplicat els canvis"</seg>
+      </tuv>
+     <note>'No s'han aplicat' should be 'No es poden aplicar'</note>
+    </tu>
+
+            
   <tu>
       <tuv xml:lang="en">
         <seg>Audio Player</seg>
@@ -8108,42 +8150,6 @@ Exec=&lt;var&gt;myapplication1&lt;/var&gt;</seg>
       </tuv>
       <tuv xml:lang=" ca">
         <seg>diversos processos &lt;app&gt;GVFS&lt;/app&gt;</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>On a Debian or Debian-based system, the following error may occur:</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>A Debian o sistemes basats en Debian, es pot produir el següent error:</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Determine your user ID (&lt;sys&gt;uid&lt;/sys&gt;) by running the following command:</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Determineu el vostre ID d'usuari (&lt;sys&gt;uid&lt;/sys&gt;) executant l'ordre següent:</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>[User]
-Language=
-XSession=gnome-classic</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>[User]
-Language=
-XSession=gnome-classic</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv xml:lang="en">
-        <seg>Lock down settings</seg>
-      </tuv>
-      <tuv xml:lang=" ca">
-        <seg>Bloquejar els paràmetres</seg>
       </tuv>
     </tu>
     </body>

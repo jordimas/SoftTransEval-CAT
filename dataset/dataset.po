@@ -205,6 +205,18 @@ msgstr "Full de càlcul"
 msgid "%s Used"
 msgstr "%s no usat"
 
+msgid "The certificate contains errors"
+msgstr "El certificat conte errors"
+
+msgid "Screenshot finished"
+msgstr "Descàrrega finalitzada"
+
+msgid "More than one extension bundle specified"
+msgstr "S'ha especificat més un paquet d'extensió"
+
+msgid "Changes Cannot be Applied"
+msgstr "No s'han aplicat els canvis\""
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -4792,24 +4804,3 @@ msgstr "gnome-shell"
 
 msgid "various <app>GVFS</app> processes"
 msgstr "diversos processos <app>GVFS</app>"
-
-msgid "On a Debian or Debian-based system, the following error may occur:"
-msgstr ""
-"A Debian o sistemes basats en Debian, es pot produir el següent error:"
-
-msgid ""
-"Determine your user ID (<sys>uid</sys>) by running the following command:"
-msgstr ""
-"Determineu el vostre ID d'usuari (<sys>uid</sys>) executant l'ordre següent:"
-
-msgid ""
-"[User]\n"
-"Language=\n"
-"XSession=gnome-classic"
-msgstr ""
-"[User]\n"
-"Language=\n"
-"XSession=gnome-classic"
-
-msgid "Lock down settings"
-msgstr "Bloquejar els paràmetres"
