@@ -220,9 +220,6 @@ msgstr "No s'han aplicat els canvis"
 msgid "Screencast failed to start"
 msgstr "No s'ha pogut iniciar la captura de pantalla"
 
-msgid "Screencast failed to start"
-msgstr "No s'ha pogut iniciar la captura de pantalla"
-
 msgid ""
 "To begin, you will need the address of the computer you want to connect to."
 msgstr ""
