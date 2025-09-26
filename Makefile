@@ -1,4 +1,4 @@
-.PHONY: eval-gemma3 eval-gpt-oss eval-mistral eval-qwen3
+.PHONY: eval-gemma3 eval-gpt-oss eval-mistral eval-qwen3 all-cloud
 
 gemma_prompts := 1 2 2_1 2_2 3 3_1 3_2 4 5
 eval-gemma3:
@@ -27,5 +27,14 @@ eval-qwen3:
 		python evaluator/evaluator.py --model qwen3 --prompt_version $$p; \
 		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
 	done
+
+models := "gpt-5" "gpt-5-min" "gemini-2.5-flash" "gemini-2.5-pro"
+
+all-cloud:
+	@for model in $(models); do \
+		python evaluator/evaluator.py --model $$model; \
+	done
+	python evaluator/json_to_md.py "$$(ls -1t ./output/*.json | head -n1)"
 	
-all: eval-gemma3 gpt-oss_prompts eval-mistral eval-qwen3
+	
+all-local: eval-gemma3 gpt-oss_prompts eval-mistral eval-qwen3
