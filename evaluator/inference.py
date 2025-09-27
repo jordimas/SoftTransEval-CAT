@@ -126,6 +126,7 @@ def _write(english: str, catalan: str, note: str, result: str, fh):
     lines.append("\n-----------------------\n")
     content = "\n".join(lines)
     fh.write(content + "\n")
+    fh.flush()
     print(content)
 
 

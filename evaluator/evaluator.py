@@ -302,7 +302,7 @@ if __name__ == "__main__":
                 continue
 
             if not res.upper().startswith("YES"):
-                full_answer = f"Answer is not 'YES' or 'NO'\n" + full_answer
+                full_answer = "Answer is not 'YES' or 'NO'\n" + full_answer
 
             if note:
                 tp += 1
