@@ -28,7 +28,7 @@ eval-qwen3:
 		python evaluator/json_to_md.py $$(ls -t ./output/*.json | head -n 1); \
 	done
 
-models := "gpt-5" "gpt-5-min" "gemini-2.5-flash" "gemini-2.5-pro"
+models := "gpt-5" "gpt-5-mini" "gemini-2.5-flash" "gemini-2.5-pro"
 
 all-cloud:
 	@for model in $(models); do \
