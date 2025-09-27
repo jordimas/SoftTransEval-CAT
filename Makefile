@@ -37,4 +37,4 @@ all-cloud:
 	python evaluator/json_to_md.py "$$(ls -1t ./output/*.json | head -n1)"
 	
 	
-all-local: eval-gemma3 gpt-oss_prompts eval-mistral eval-qwen3
+all-local: eval-gemma3 eval-gpt-oss eval-mistral eval-qwen3
