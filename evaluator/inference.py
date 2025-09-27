@@ -40,7 +40,7 @@ def get_args():
     parser = argparse.ArgumentParser(
         description="Run translation inference with Gemma 3."
     )
-    parser.add_argument("--prompt_version", type=str, default="1")
+    parser.add_argument("--prompt_version", type=str, default="5")
     parser.add_argument(
         "--model_path",
         default="models/google_gemma-3-27b-it-Q8_0.gguf",

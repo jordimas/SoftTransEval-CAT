@@ -10,14 +10,16 @@ This repository includes three main components:
 - Tool to evaluate LLMs and prompts against the dataset
 - Collection of winning prompts for the task
 
+This work has been used to review the Catalan translations of the GNOME project.
+
 # Dataset
 
 Dataset is located at [dataset/dataset.tmx](dataset/dataset.tmx).
 
 The dataset has the following characteristics:
 - English - Catalan only
-- Contains 1,000 translations from the GNOME UI and documentation projects
-- Includes 10% translation errors (it is imbalanced), which have been reviewed and corrected by humans
+- Contains 1000 translations from the GNOME UI and documentation projects
+- Includes 5% translation errors (it is imbalanced), which have been reviewed and corrected by humans
 
 # Evaluation of different prompts
 
@@ -52,6 +54,8 @@ Legend:
 If you are not familiar with these concepts, check the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) at Wikipedia.
 
 # Using the system to review your translation
+
+Our current recommendation is Gemma 3 27B with prompt version 5.
 
 If you have a file in PO format tha you want to review, follow these instructions.
 
