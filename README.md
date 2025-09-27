@@ -23,17 +23,19 @@ The dataset has the following characteristics:
 
 Prompts are in [config/](config/) directory.
 
-| model | version | comment | tp | fp | fn | tn | precision | recall | f1 | time |
+| model | version | comment | tp | fn | fp | tn | precision | recall | f1 | time |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| gemma3 | 1 | This is the baseline | 11 | 14 | 9 | 166 | 0.44 | 0.55 | 0.49 | 1702 |
-| gemma3 | 2 | Pure instructions prompt | 10 | 7 | 10 | 173 | 0.59 | 0.5 | 0.54 | 1588 |
-| gemma3 | 2_1 | Pure instructions prompt v2.1 | 10 | 5 | 10 | 175 | 0.67 | 0.5 | 0.57 | 1432 |
-| gemma3 | 2_2 | Pure instructions prompt v2.2 | 3 | 3 | 17 | 177 | 0.5 | 0.15 | 0.23 | 1120 |
-| gemma3 | 3 | Prompt with samples | 6 | 2 | 14 | 178 | 0.75 | 0.3 | 0.43 | 1307 |
-| gemma3 | 3_1 | Prompt with samples v3.1 | 4 | 4 | 16 | 176 | 0.5 | 0.2 | 0.29 | 1217 |
-| gemma3 | 3_2 | Prompt with samples v2.2 | 8 | 85 | 12 | 95 | 0.09 | 0.4 | 0.14 | 1701 |
-| gemma3 | 4 | Super simple prompt | 15 | 36 | 5 | 144 | 0.29 | 0.75 | 0.42 | 7969 |
-| gemma3 | 5 | Categorization prompt | 16 | 51 | 4 | 129 | 0.24 | 0.8 | 0.37 | 6007 |
+| gpt-5 | 1 | Default prompt description | 11 | 39 | 8 | 342 | 0.58 | 0.22 | 0.32 | 1293 |
+| gpt-5-mini | 1 | Default prompt description | 13 | 37 | 12 | 338 | 0.52 | 0.26 | 0.35 | 1456 |
+| gemini-2.5-flash | 1 | Default prompt description | 13 | 37 | 5 | 345 | 0.72 | 0.26 | 0.38 | 840 |
+| gemini-2.5-pro | 1 | Default prompt description | 15 | 35 | 9 | 341 | 0.62 | 0.3 | 0.41 | 2971 |
+| gemma3 | 1 | This is the baseline | 15 | 35 | 18 | 332 | 0.45 | 0.3 | 0.36 | 1267 |
+| gemma3 | 2 | Pure instructions prompt | 17 | 33 | 25 | 325 | 0.4 | 0.34 | 0.37 | 1296 |
+| gemma3 | 2_1 | Pure instructions prompt v2.1 | 18 | 32 | 28 | 322 | 0.39 | 0.36 | 0.37 | 1236 |
+| gemma3 | 3 | Prompt with samples | 14 | 36 | 16 | 334 | 0.47 | 0.28 | 0.35 | 1314 |
+| gemma3 | 3_1 | Prompt with samples v3.1 | 8 | 42 | 6 | 344 | 0.57 | 0.16 | 0.25 | 911 |
+| gemma3 | 4 | Super simple prompt | 33 | 17 | 84 | 266 | 0.28 | 0.66 | 0.4 | 3716 |
+| gemma3 | 5 | Categorization prompt | 32 | 18 | 75 | 275 | 0.3 | 0.64 | 0.41 | 1776 |
 
 Notes:
 - Gemma 3 is Gemma 3 27B model
