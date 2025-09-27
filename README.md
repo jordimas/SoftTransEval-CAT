@@ -12,7 +12,7 @@ This repository includes three main components:
 
 # Dataset
 
-Dataset is located at [dataset/dataset.tmx](dataset/dataset.tmx) file.
+Dataset is located at [dataset/dataset.tmx](dataset/dataset.tmx).
 
 The dataset has the following characteristics:
 - English - Catalan only
@@ -35,7 +35,9 @@ Prompts are in [config/](config/) directory.
 | gemma3 | 4 | Super simple prompt | 15 | 36 | 5 | 144 | 0.29 | 0.75 | 0.42 | 7969 |
 | gemma3 | 5 | Categorization prompt | 16 | 51 | 4 | 129 | 0.24 | 0.8 | 0.37 | 6007 |
 
-Note: Gemma 3 is Gemma 3 27B model
+Notes:
+- Gemma 3 is Gemma 3 27B model
+- This evalalution is done over 400 strings of which 12.50% contain errors and 87.50% are correct.
 
 Legend:
 - version: version of the prompt
