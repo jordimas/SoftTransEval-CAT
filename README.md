@@ -61,12 +61,10 @@ If you have a file in PO format tha you want to review, follow these instruction
 pip install -r evaluator/requirements.txt
 ```
 
-```sh
-python evaluator/inference.py --input NetworkManager.main.ca.po
-
+2. Run it in your own PO file:
 
 ```sh
-python evaluator/inference.py --input FILE.Po
+python evaluator/inference.py --input FILE.po
 ```
 
 The output is a FILE.txt with all the detected errors.
