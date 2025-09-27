@@ -36,9 +36,6 @@ def load_llm(model_path: str, temperature: float = 0):
     )
 
 
-# -------------------------
-# Args
-# -------------------------
 def get_args():
     parser = argparse.ArgumentParser(
         description="Run translation inference with Gemma 3."
@@ -95,15 +92,23 @@ def translate(llm, prompt: str, english: str, catalan: str) -> str:
     return answer
 
 
-def load_strings(dataset: str, max_entries=-1):
+def load_strings(dataset: str, max_entries: int = -1):
     po = polib.pofile(dataset)
     strings = []
     for idx, entry in enumerate(po, start=1):
+        # Skip fuzzy or obsolete entries
+        source = entry.msgid
+        target = entry.msgstr.strip()
+
+        if entry.obsolete or "fuzzy" in entry.flags or len(target) == 0:
+            continue
+
         source = entry.msgid
         target = entry.msgstr
         note = entry.comment or ""
         strings.append((source, target, note))
-        if max_entries > 0 and idx >= max_entries:
+
+        if max_entries > 0 and len(strings) >= max_entries:
             break
 
     print(f"Loaded {len(strings)} strings from {dataset}")
@@ -152,7 +157,7 @@ if __name__ == "__main__":
             res = translate(llm, prompt, en, ca)
             processed += 1
 
-            if idx % 10 == 0:
+            if idx % 100 == 0:
                 elapsed = time.time() - start_time
                 print(
                     f"Progress: {(idx/total_strings)*100:.2f}% - {idx}/{total_strings} | Time: {elapsed:.2f}s"
