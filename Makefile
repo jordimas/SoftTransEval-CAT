@@ -1,6 +1,6 @@
 .PHONY: eval-gemma3 eval-gpt-oss eval-mistral eval-qwen3 all-cloud
 
-gemma_prompts := 1 2 2_1 2_2 3 3_1 3_2 4 5
+gemma_prompts := 1 2 2_1 3 3_1 4 5
 eval-gemma3:
 	@for p in $(gemma_prompts); do \
 		python evaluator/evaluator.py --prompt_version $$p; \
