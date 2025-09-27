@@ -1,5 +1,7 @@
 .PHONY: eval-gemma3 eval-gpt-oss eval-mistral eval-qwen3 all-cloud
 
+all-local: eval-gemma3 eval-gpt-oss eval-mistral eval-qwen3
+
 gemma_prompts := 1 2 2_1 3 3_1 4 5
 eval-gemma3:
 	@for p in $(gemma_prompts); do \
@@ -35,6 +37,9 @@ all-cloud:
 		python evaluator/evaluator.py --model $$model; \
 	done
 	python evaluator/json_to_md.py "$$(ls -1t ./output/*.json | head -n1)"
+
+download-models:
+	mkdir -p models
+	wget -P models "https://huggingface.co/bartowski/google_gemma-3-27b-it-GGUF/resolve/main/google_gemma-3-27b-it-Q8_0.gguf?download=true"
 	
-	
-all-local: eval-gemma3 eval-gpt-oss eval-mistral eval-qwen3
+

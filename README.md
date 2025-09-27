@@ -51,7 +51,7 @@ Legend:
 
 If you are not familiar with these concepts, check the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) at Wikipedia.
 
-# Using the system to review your own files
+# Using the system to review your translation
 
 If you have a file in PO format tha you want to review, follow these instructions.
 
@@ -61,7 +61,12 @@ If you have a file in PO format tha you want to review, follow these instruction
 pip install -r evaluator/requirements.txt
 ```
 
-2. Run it in your own PO file:
+2. Download the model
+```sh
+make download-models
+```
+
+3. Run it in your own PO file:
 
 ```sh
 python evaluator/inference.py --input FILE.po
