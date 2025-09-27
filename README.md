@@ -77,5 +77,6 @@ python evaluator/inference.py --input FILE.po
 ```
 
 The output is a FILE.txt with all the detected errors.
+Expect the system to generate a large amount of false postives but the true positives are very useful.
 
 
