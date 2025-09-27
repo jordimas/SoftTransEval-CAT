@@ -50,3 +50,25 @@ Legend:
 - tn: true negative
 
 If you are not familiar with these concepts, check the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) at Wikipedia.
+
+# Using the system to review your own files
+
+If you have a file in PO format tha you want to review, follow these instructions.
+
+1. Install the necessary dependencies:
+
+```sh
+pip install -r evaluator/requirements.txt
+```
+
+```sh
+python evaluator/inference.py --input NetworkManager.main.ca.po
+
+
+```sh
+python evaluator/inference.py --input FILE.Po
+```
+
+The output is a FILE.txt with all the detected errors.
+
+
