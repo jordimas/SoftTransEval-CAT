@@ -40,8 +40,8 @@ Prompts are in [config/](config/) directory.
 | gemma3 | 5 | Categorization prompt | 32 | 18 | 75 | 275 | 0.3 | 0.64 | 0.41 | 1776 |
 
 Notes:
-- Gemma 3 is Gemma 3 27B model
-- This evalalution is done over 400 strings of which 12.50% contain errors and 87.50% are correct.
+- Gemma 3 is Gemma 3 27B model quantified at 8 bits
+- This evaluation is done over 400 strings of which 12.50% contain errors and 87.50% are correct.
 
 Legend:
 - version: version of the prompt
@@ -57,7 +57,7 @@ If you are not familiar with these concepts, check the [confusion matrix](https:
 
 Our current recommendation is Gemma 3 27B with prompt version 5.
 
-If you have a file in PO format tha you want to review, follow these instructions.
+If you have a file in PO format that you want to review, follow these instructions.
 
 1. Install the necessary dependencies:
 
@@ -77,6 +77,6 @@ python evaluator/inference.py --input FILE.po
 ```
 
 The output is a FILE.txt with all the detected errors.
-Expect the system to generate a large amount of false postives but the true positives are very useful.
+Expect the system to generate a large amount of false positives but the true positives are very useful.
 
 
