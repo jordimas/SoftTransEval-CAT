@@ -228,6 +228,9 @@ msgstr ""
 msgid "Past Week"
 msgstr "Fa una setmana"
 
+msgid "How many pixels per second to move at the maximum speed."
+msgstr "La quantitat de píxels per segon es mourà a la velocitat màxima."
+
 msgid "Audio Player"
 msgstr "Reproductor d'àudio"
 
@@ -1013,9 +1016,6 @@ msgstr "Un connector per a obtenir avatars pels camps d'artista i d'autor"
 
 msgid "Authentication required: %s"
 msgstr "Cal autenticació: %s"
-
-msgid "How many pixels per second to move at the maximum speed."
-msgstr "La quantitat de píxels per segon es mourà a la velocitat màxima."
 
 msgid ""
 "Represents a change to the default contrast of the green component. Zero "

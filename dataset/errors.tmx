@@ -507,7 +507,16 @@
      <note>'Fa una setmana' should be 'Setmana passada'</note>
     </tu>
 
-            
+    <tu>
+      <tuv xml:lang="en">
+        <seg>How many pixels per second to move at the maximum speed.</seg>
+      </tuv>
+      <tuv xml:lang=" ca">
+        <seg>La quantitat de píxels per segon es mourà a la velocitat màxima.</seg>
+      </tuv>
+     <note>'es mourà' should be 'que es mourà'</note>
+    </tu>
+
   </body>
 </tmx>
 
