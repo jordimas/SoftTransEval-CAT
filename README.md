@@ -27,17 +27,17 @@ Prompts are in [config/](config/) directory.
 
 | model | version | comment | tp | fn | fp | tn | precision | recall | f1 | time |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| gpt-5 | 1 | Default prompt description | 11 | 39 | 8 | 342 | 0.58 | 0.22 | 0.32 | 1293 |
-| gpt-5-mini | 1 | Default prompt description | 13 | 37 | 12 | 338 | 0.52 | 0.26 | 0.35 | 1456 |
-| gemini-2.5-flash | 1 | Default prompt description | 13 | 37 | 5 | 345 | 0.72 | 0.26 | 0.38 | 840 |
-| gemini-2.5-pro | 1 | Default prompt description | 15 | 35 | 9 | 341 | 0.62 | 0.3 | 0.41 | 2971 |
-| gemma3 | 1 | This is the baseline | 15 | 35 | 18 | 332 | 0.45 | 0.3 | 0.36 | 1267 |
-| gemma3 | 2 | Pure instructions prompt | 17 | 33 | 25 | 325 | 0.4 | 0.34 | 0.37 | 1296 |
-| gemma3 | 2_1 | Pure instructions prompt v2.1 | 18 | 32 | 28 | 322 | 0.39 | 0.36 | 0.37 | 1236 |
-| gemma3 | 3 | Prompt with samples | 14 | 36 | 16 | 334 | 0.47 | 0.28 | 0.35 | 1314 |
-| gemma3 | 3_1 | Prompt with samples v3.1 | 8 | 42 | 6 | 344 | 0.57 | 0.16 | 0.25 | 911 |
-| gemma3 | 4 | Super simple prompt | 33 | 17 | 84 | 266 | 0.28 | 0.66 | 0.4 | 3716 |
-| gemma3 | 5 | Categorization prompt | 32 | 18 | 75 | 275 | 0.3 | 0.64 | 0.41 | 1776 |
+| gpt-5 | 1 | Default prompt description | 10 | 41 | 5 | 944 | 0.67 | 0.2 | 0.3 | 4665 |
+| gpt-5-mini | 1 | Default prompt description | 14 | 37 | 29 | 920 | 0.33 | 0.27 | 0.3 | 5200 |
+| gemini-2.5-flash | 1 | Default prompt description | 13 | 38 | 16 | 933 | 0.45 | 0.25 | 0.33 | 3032 |
+| gemini-2.5-pro | 1 | Default prompt description | 15 | 36 | 19 | 930 | 0.44 | 0.29 | 0.35 | 7257 |
+| gemma3 | 1 | This is the baseline | 16 | 35 | 33 | 916 | 0.33 | 0.31 | 0.32 | 3476 |
+| gemma3 | 2 | Pure instructions prompt | 18 | 33 | 50 | 899 | 0.26 | 0.35 | 0.3 | 3732 |
+| gemma3 | 2_1 | Pure instructions prompt v2.1 | 19 | 32 | 56 | 893 | 0.25 | 0.37 | 0.3 | 3701 |
+| gemma3 | 3 | Prompt with samples | 14 | 37 | 41 | 908 | 0.25 | 0.27 | 0.26 | 4156 |
+| gemma3 | 3_1 | Prompt with samples v3.1 | 8 | 43 | 12 | 937 | 0.4 | 0.16 | 0.23 | 3100 |
+| gemma3 | 4 | Super simple prompt | 34 | 17 | 210 | 739 | 0.14 | 0.67 | 0.23 | 8995 |
+| gemma3 | 5 | Categorization prompt | 33 | 18 | 214 | 735 | 0.13 | 0.65 | 0.22 | 5974 |
 
 Notes:
 - Gemma 3 is Gemma 3 27B model quantified at 8 bits
@@ -55,7 +55,7 @@ If you are not familiar with these concepts, check the [confusion matrix](https:
 
 # Using the system to review your translation
 
-Our current recommendation is Gemma 3 27B with prompt version 5.
+Our current recommendation is Gemma 3 27B with prompt version 1.
 
 If you have a file in PO format that you want to review, follow these instructions.
 
