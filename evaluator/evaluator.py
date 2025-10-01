@@ -113,7 +113,7 @@ def load_llm(model_type: str, model_path: str = None, temperature: float = 0):
 def get_args():
     parser = argparse.ArgumentParser(description="Run translation reviewer.")
     parser.add_argument("--prompt_version", type=str, default="1")
-    parser.add_argument("--max", type=int, default=400)
+    parser.add_argument("--max", type=int, default=1000)
     parser.add_argument(
         "--model_type",
         type=str,
