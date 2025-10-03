@@ -27,10 +27,6 @@ Prompts are in [config/](config/) directory.
 
 | model | version | comment | tp | fn | fp | tn | precision | recall | f1 | time |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| gpt-5 | 1 | Default prompt description | 10 | 41 | 5 | 944 | 0.67 | 0.2 | 0.3 | 4665 |
-| gpt-5-mini | 1 | Default prompt description | 14 | 37 | 29 | 920 | 0.33 | 0.27 | 0.3 | 5200 |
-| gemini-2.5-flash | 1 | Default prompt description | 13 | 38 | 16 | 933 | 0.45 | 0.25 | 0.33 | 3032 |
-| gemini-2.5-pro | 1 | Default prompt description | 15 | 36 | 19 | 930 | 0.44 | 0.29 | 0.35 | 7257 |
 | gemma3 | 1 | This is the baseline | 16 | 35 | 33 | 916 | 0.33 | 0.31 | 0.32 | 3476 |
 | gemma3 | 2 | Pure instructions prompt | 18 | 33 | 50 | 899 | 0.26 | 0.35 | 0.3 | 3732 |
 | gemma3 | 2_1 | Pure instructions prompt v2.1 | 19 | 32 | 56 | 893 | 0.25 | 0.37 | 0.3 | 3701 |
@@ -41,7 +37,17 @@ Prompts are in [config/](config/) directory.
 
 Notes:
 - Gemma 3 is Gemma 3 27B model quantified at 8 bits
-- This evaluation is done over 400 strings of which 12.50% contain errors and 87.50% are correct.
+- This evaluation is done over 1000 strings of which 5.10% contain errors and 94.90% are correct.
+
+
+For reference, these are the metrics of some commercial models:
+
+| model | version | comment | tp | fn | fp | tn | precision | recall | f1 | time |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| gpt-5 | 1 | Default prompt description | 11 | 40 | 11 | 938 | 0.5 | 0.22 | 0.3 | 5424 |
+| gpt-5-mini | 1 | Default prompt description | 13 | 38 | 22 | 927 | 0.37 | 0.25 | 0.3 | 10528 |
+| gemini-2.5-flash | 1 | Default prompt description | 13 | 38 | 18 | 931 | 0.42 | 0.25 | 0.32 | 5573 |
+| gemini-2.5-pro | 1 | Default prompt description | 14 | 37 | 17 | 932 | 0.45 | 0.27 | 0.34 | 11902 |
 
 Legend:
 - version: version of the prompt
