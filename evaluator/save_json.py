@@ -1,0 +1,51 @@
+import json
+import os
+from datetime import datetime
+
+
+def save_json(
+    model,
+    prompt_version,
+    prompt_comment,
+    tp,
+    fp,
+    fn,
+    tn,
+    precision,
+    recall,
+    f1,
+    total_time,
+    processed,
+):
+    json_path = f"output/stats_{processed}.json"
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    record = {
+        "date_time": now,
+        "model": model,
+        "version": prompt_version,
+        "comment": prompt_comment,
+        "tp": tp,
+        "fn": fn,
+        "fp": fp,
+        "tn": tn,
+        "precision": round(precision, 2),
+        "recall": round(recall, 2),
+        "f1": round(f1, 2),
+        "time": f"{total_time:.0f}",
+    }
+
+    if os.path.exists(json_path):
+        with open(json_path, "r", encoding="utf-8") as fh:
+            try:
+                data = json.load(fh)
+                if not isinstance(data, list):
+                    data = [data]  # ensure it's always a list
+            except json.JSONDecodeError:
+                data = []
+        data.append(record)
+    else:
+        data = [record]
+
+    with open(json_path, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, indent=2, ensure_ascii=False)
