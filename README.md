@@ -68,7 +68,7 @@ If you have a file in PO format that you want to review, follow these instructio
 1. Install the necessary dependencies:
 
 ```sh
-pip install -r evaluator/requirements.txt
+pip install -r evaluator/requirements-evaluator.txt
 ```
 
 2. Download the model
