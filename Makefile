@@ -40,6 +40,6 @@ all-cloud:
 
 download-models:
 	mkdir -p models
-	wget -P models "https://huggingface.co/bartowski/google_gemma-3-27b-it-GGUF/resolve/main/google_gemma-3-27b-it-Q8_0.gguf?download=true"
+	wget -P models "https://huggingface.co/bartowski/google_gemma-3-27b-it-GGUF/resolve/main/google_gemma-3-27b-it-Q8_0.gguf"
 	
 
