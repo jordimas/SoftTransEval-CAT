@@ -25,7 +25,7 @@ The dataset has the following characteristics:
 
 Prompts are in [config/](config/) directory.
 
-Models discarded:
+Models discarded
 
 | model | version | comment | tp | fn | fp | tn | precision | recall | f1 | time |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
