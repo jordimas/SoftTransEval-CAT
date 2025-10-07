@@ -21,9 +21,15 @@ The dataset has the following characteristics:
 - Contains 1000 translations from the GNOME UI and documentation projects
 - Includes 5% translation errors (it is imbalanced), which have been reviewed and corrected by humans
 
-# Evaluation of different prompts
+# Evaluation of different models prompts
 
 Prompts are in [config/](config/) directory.
+
+| model | version | comment | tp | fn | fp | tn | precision | recall | f1 | time |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| qwen3 | 1 | This is the baseline | 37 | 14 | 438 | 511 | 0.08 | 0.73 | 0.14 | 55105 |
+| mistral | 1 | This is the baseline | 50 | 1 | 787 | 162 | 0.06 | 0.98 | 0.11 | 64164 |
+
 
 | model | version | comment | tp | fn | fp | tn | precision | recall | f1 | time |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
